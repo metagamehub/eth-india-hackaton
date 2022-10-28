@@ -1,0 +1,17 @@
+{
+  "name": "hackathon-indexer",
+  "version": "1.0.0",
+  "description": "Indexer for MGH loyalty points proyect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSE",
+  "dependencies": {
+    "@hyperdivision/eth-transaction-indexer": "^2.1.1",
+    "dotenv": "^16.0.3",
+    "hypercore": "^10.4.1",
+    "web3": "^1.8.0"
+  }
+}
