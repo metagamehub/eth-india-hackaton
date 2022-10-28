@@ -1,0 +1,9 @@
+{
+    "development":  {
+        "username": "toqkzvkj",
+        "password": "3WNlJFycBeP2ZJFUCGxdNess7X_B_Lzm",
+        "database": "toqkzvkj",
+        "host": "heffalump.db.elephantsql.com",
+        "dialect": "postgres"
+      }
+}
