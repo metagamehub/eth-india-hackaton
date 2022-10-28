@@ -1,0 +1,1195 @@
+2022-10-28T23:37:15.317Z update on decentralanad-polygon-collection-factory
+{
+  walletAddress: '0x943D99CEFA84b247b679D2B7cce17c7C93e6587b',
+  reward: 0,
+  eventType: 'deployedCollection',
+  event_id: 'deployedCollection-0x576c41855e5d5340a8c540b048f99c4cfdd62ea0ba40fa57a4f199a8682c78a2-58'
+}
+2022-10-28T23:37:15.743Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x5e0f7C2fdcf2840AB436CE486eE56b32DB6c6E4a',
+    reward: '1000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x95a228929dad6ad389a7415a6e84031074b106d5e2f02cf119aff596a5e557c6-168-0'
+  }
+]
+2022-10-28T23:37:15.743Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x6758699170D80E6de3CE2467Ea4D7B05713bc292',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x1460981b815d72a11bf760c1a0a95c3ec26df5fd1bd3326411e8b3fcd207520b-150-0'
+  }
+]
+2022-10-28T23:37:15.743Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x8F14d816dfeAD2c9806E3d0B598Ee4F2Ba8FdE54',
+    reward: '8000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x4bae47ea15d73c4b41d4fc721818282e3809b83e6d36dcca5e8c4430d3df49b2-103-0'
+  }
+]
+2022-10-28T23:37:15.743Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xa5dbD5f2F45Cec05ACe6C08F0b75BeC711EA9517',
+    reward: '10000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x9e2945912be509b5ef373eae871265d240965d40142eb7fc497f6008bff4ec45-190-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x6758699170D80E6de3CE2467Ea4D7B05713bc292',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x434566a621f1e3f8d1546ad70759f6ad9ff7e82bfadd4226c93afa8781e453db-320-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x6758699170D80E6de3CE2467Ea4D7B05713bc292',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x21201fe9f494d96f35b8ea3b4261f759c099de59f2dc9b905d2dc38649a45208-277-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x6758699170D80E6de3CE2467Ea4D7B05713bc292',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x4918d0e08b0bb5a5dd73a616edf0a854dc03792bd4f35c38e93fb4dbc86f138a-171-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x6758699170D80E6de3CE2467Ea4D7B05713bc292',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xcb0a62a57a9892d2255cbd237560e1389b9696ce8b991498128c147e26bf9a2b-179-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x103629d6aFe07b2447140A2Fdb14cD6Ce9d6fec1',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x8f17d6a365008bed054fabb43af4cc85b0bb8db1150760a8628b472905d3e350-216-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x103629d6aFe07b2447140A2Fdb14cD6Ce9d6fec1',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x46602c688ecca64096115f3712365689df37658cca8051606957e04991d5816b-125-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x6758699170D80E6de3CE2467Ea4D7B05713bc292',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xe8301225294cc00fd816e4627d2bbe196cb812dd9576e0d5be632dd75a92aa5f-174-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x103629d6aFe07b2447140A2Fdb14cD6Ce9d6fec1',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xfc3f223eb66044a4321fbb92caeafd51732f9578b0a70054b608be5a77dd4c7f-160-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x6758699170D80E6de3CE2467Ea4D7B05713bc292',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x577d96feba1d1097d26d5b682ad1e369b19cac7b86a48906c0c9574fe47b9e2b-181-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x103629d6aFe07b2447140A2Fdb14cD6Ce9d6fec1',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xf88f279857f188161a5aa4455eaa576463677576ad2ea308c97ef1bf56e21b22-259-0'
+  }
+]
+2022-10-28T23:37:15.744Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x103629d6aFe07b2447140A2Fdb14cD6Ce9d6fec1',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xb51e712d7b2b187acf6028d0f2d1ef294a4c9f482692d93452d0e67b9c5feea3-182-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xc04f9A0891fb830c5B03B8C78C051953B5Ddb7cb',
+    reward: '5000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x9542584b2075f12bd8875ae166e51f13eb5f662814c39e8c145b4150cedc019d-140-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xc04f9A0891fb830c5B03B8C78C051953B5Ddb7cb',
+    reward: '3000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x5872c8859cfb691994e7be71deb3944745453b59dfe498c1f3720a0bda8de16c-207-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA54c8622D10c9ab06C229E3A2f154add2A1Aac53',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xf7fd49aab56b6a94ca5b506f682ff390d762352ebc2659378056f81747d9fc92-254-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x56e95c4716b7424D5356F1958a1d63CC99a6210D',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x32d2aeecb19250c6b1d992ed70ef9125131f28710fae2694f37c7f4bef7f8f3d-120-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x56e95c4716b7424D5356F1958a1d63CC99a6210D',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xdc9782bb64755ef0f67c2359cf1ea2516da693c6ffe1b4e3b21f2f469b710a97-257-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x56e95c4716b7424D5356F1958a1d63CC99a6210D',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x585a45a3c42587fafd82d9e9ce2e9e17c1d2dbd09737e96655592111ee37c4dd-165-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x56e95c4716b7424D5356F1958a1d63CC99a6210D',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xd582fb49d537132c8e377efbc2368406b8e7bf985e03727201cd3b47583dfb8c-293-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x56e95c4716b7424D5356F1958a1d63CC99a6210D',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xf5d55f18ade18aea252f90fd3599084d5f23635551cce47b0fe5fff2fb70576a-297-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x56e95c4716b7424D5356F1958a1d63CC99a6210D',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x736778e839b4e3707f6a4aecaa4763cc73b64f01efdc3c85cee1f79813b194c7-301-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x56e95c4716b7424D5356F1958a1d63CC99a6210D',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xd2bb165b2215c23161d42e05abe79ea48f61a5c1eb76cff92eccbba44b14c5de-249-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xC4D4080e374D8e21bBDB0D2CC41f20D0E2bbd80E',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x2a73294504d84f8faa2601429b8bfd7873a631b35bf7b95dc06c912d455d4dc9-189-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xC4D4080e374D8e21bBDB0D2CC41f20D0E2bbd80E',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xa601f70f8475b3cf430a41785dfa1d5719ab8c91b76d1945ebdb19c735c57558-222-0'
+  }
+]
+2022-10-28T23:37:15.745Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xC4D4080e374D8e21bBDB0D2CC41f20D0E2bbd80E',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x73dfbd5dc7eb47f4d3f5b16a68c3734824c77344987a33e20f8be978e050a3a3-244-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xC4D4080e374D8e21bBDB0D2CC41f20D0E2bbd80E',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x6566cfa098d5818f25d63bd41ae48d2784268512966f9661d9501590f687637d-99-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xC4D4080e374D8e21bBDB0D2CC41f20D0E2bbd80E',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x6dac42eb10dbe9181e525d7ff2e05a71ea46dd849ec0072e74327f5fdcba76dd-155-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xC4D4080e374D8e21bBDB0D2CC41f20D0E2bbd80E',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x32e53c811df84454150ca6d8bf5917af12ca63c22b022f6f24974c44ee6c520d-143-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xC4D4080e374D8e21bBDB0D2CC41f20D0E2bbd80E',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xdd5e0960f09ae988549ce1f43cad1857359aae6efb0010c989d5e4d40730aea7-223-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x1d7886346175e34c614b71d0E2369c7f0E350D07',
+    reward: '5000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xd2facf42614e31ee7ec6333617a9ca8e307467cd80f79ebdf32d424c7c16ac68-141-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xa9F07D4B9FF368851Af454DfFea60A3F7F587eee',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xa888b5b19a41d7259434574863b2c1816ef5601116496550926d71c19182b49a-159-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xa9F07D4B9FF368851Af454DfFea60A3F7F587eee',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x97d35f449fe5771961bf0228e617d08dc5bcb131110fad35756950ea54fc8954-185-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xa9F07D4B9FF368851Af454DfFea60A3F7F587eee',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xbcf4e9ebc53cff7bda82be57f4b0960bf9a2cda7a71c5c012a41dc1ac956ce43-140-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '1000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x45d9a7581e2fa54bde12e917caa6e4d51966971af6b9c238aceba9b7aca2eedc-613-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '1000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x9ec5c5c0b5afc47b63f8ae48cfcb0c473c57d06efaac17ee45a12e9abc1f2c47-625-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '1000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x981e1d5c3f9fa1a7f28b008201f5bb6fbd44105ff709f1d923116c07528be555-633-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '1000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x0e85dbccf10eed97b4ac6230399c8dc1a3d0db19fe269beb904d0f045fcae467-206-0'
+  }
+]
+2022-10-28T23:37:15.746Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '100000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x8fe3f34d9d2d0f54e46f7e15cf6695d349a1422c2b027e02f6d65bc654f3cd70-215-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x12ca929468d43d5954e6eb0d60c122926c750dce6b51296128b4d933e1074620-219-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x0fB882f1c83a66d584F8fC28b87e5706199487Ed',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x4c952c9d3180cc0fdabf3e72aaf51638aef962727d18b40549cd6ef1b645c767-341-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xec607e050fdf75c5bac7dfa1cc5427745e0ded3be7dd7223ee4fd4b59eb87f7a-276-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '100000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x92229fd399fd30a70a0dee8b5b162afc52a7d549b28f8108103e28d4ef84b9bb-499-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x46d5e2F151CD9C11BF32ca6B87cA1f65eD400fA4',
+    reward: '2000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x1174c9daaa8d9600b45dd179956475e1d8cd9db22ece5e0808b16b9c60d2090c-227-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x9fa188d97130d3602e6633a98f1ada930ec613e313cd1aca969331228938c6f7-196-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xd9c2e5fb49c47349602c3e80effe209c4a2c4700a78804ff076dbc2e78dae573-196-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x584e3538525901c524df018c9de146a54ca6c7a377718c622b378a9229b7eef4-256-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x0132e06e5af3b752c6cd21267c916b4363e00b66e2f130d65f939940e61ccd19-156-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xb23d0abb5c92dc9c8133027a60fd68afeac0f191face5372cc47d15b1f4a0f79-229-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xfd7f227e26797f37ec938d22d2e5e088c47c48318298802e077480026f22e788-275-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x69431a3d9da310616b102cdc2ab8cca25e2a779a74bb8a51b987393081e1c7d0-201-0'
+  }
+]
+2022-10-28T23:37:15.747Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x911801fb265b43d7528854ff5a93a92193f753a6ecad097e21bff054fc4b7228-326-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xe1a6f5071022f61669fb3487af56403186004b270a937622f3b82d06be081a16-86-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x7fa4140a988562f32e14c0b440696df0767f9815e599b5bc0f02fe82dfcf87f7-538-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xfdd92ce57295eab09ec2531bab350db8b11b82192452ee73fe05964a38d872f0-274-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x0b5bEc5F710ec61bfb44ef3b11C8C9d0DdA6D3E3',
+    reward: '12000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xdd40911e1b5d7fb28bbf8439468265b64e2bc42b8e54d1cd01b7018fcd9e064a-97-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x29c544a27540364c431fd8ecf598bab310a67fb8edfd57eef93518d005765eb3-184-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x31ca60e2e4e30314fccc29f927dc708394e506dae7eb52d9bab91f3fe43b7ce8-149-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xf8f0e2bc7df7333dcfa7ffc27cee643c749cd27a7644590fb35e750be674d358-307-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x63d60be7db73f48191345ea3a199d118d0aca5322469f32f5b70d3db63fbc074-142-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '100000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xcd26b5e34e7b4554402345522b6d95913a3399013b39e0cb985ba0572e388980-156-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '100000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x7e86e8efba0da4ccbe9a3f410023012960ead80765795cc27d6365db5a4a2638-142-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xd5e3593603583cf73a17cea55031a343b49bbea18043c312f2a34bac980dd8ef-323-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x6d70b861985a8961f52e5b88d8628f2fbce8fed9dec6e3122f78e0db7a154593-246-0'
+  }
+]
+2022-10-28T23:37:15.748Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x4a3be419b0bff9f417fceb5d22f00fa8f4424b3cc2c20fa29a4cc8521d766816-137-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x2a15934724ba22185b26b3a586a54695079ca44bce071a01338b845fcefe1447-169-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x703e80638af3a958e8bf79a75a84b90032e5f391c9e07cc23c4408ec15650bda-91-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xd005903e91435fa672d621b7958823cab8b8f1d6f72c51ce2200bb55694d742e-163-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xa2580574cfe8bb74055d7f1095e6b89f683991229ec87c683dbacace133bebf4-106-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x2187dfd5930fa352a3bb5d92d586d35f84291ff0ff995581d1b14091790e04f7-158-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '3990000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x2eb34fd662eadfba383d10d85ef06aec7c7a320ecb880ad54cbd9a9d8eb0ed47-165-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '10000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x351b2661e751f65fdabe852d39523bbe0df3e22427c3f1ac726eff387e4f7b4c-242-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x6652d62fed8b99d33483e692253f9e5398b302cf27081dd0193a93e1ecd2f2ca-257-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '10000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x50df001b1537cbdda0c1a41a26434a3b30ec5030428b1f3b55682cfc979b838a-685-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x1b6067856a28ae52d8ea42e4a1ade6985d65a1adbb3409b642f6a2db64624743-361-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '8000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x40c84090014670598e36d4b84bb4c6e34ce6d18099fd4ff94f2aa6ec745de8de-99-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x4225c579d99a8756a06e09455a5226ab28e47c2f3956cd4f7eb329e94ff535f8-293-0'
+  }
+]
+2022-10-28T23:37:15.749Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xbde24b4138c93dfe9f2b29b78b5f35fcc0b9b69395be599b32bd6a822d143e74-253-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '5000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xc7d99d2ae2de13757264bb07ab321f664907cb90f9f1a043117268eb1588e8f8-183-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xcf0b58563ac03a73d2e3f2da97f2648be1fa382898c6d8f03cbbd88e58a229dd-203-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '7500000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xd27839636c546f755de49bb4019536b00fbeeffaabb68729395ff9b81d5e08ee-139-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x057e57c7f1831fca73eaf4fd97d359668d85642ea3bd7c01098f20edd6cc932b-138-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '5000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x601661b04cad7e54cd84180c5b69795a9f17e371710ec2a0b1a6b7053651bdcd-386-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x172fd8065fd1646a8cf472dfc606ef6024840259f376e3a7d969ee6ff0352b5b-340-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '5000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xeac063053712bbf9dcf48313cf3d73bce9e87f40b583b743346e4175fa282197-109-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '10000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xbcd66c2f7aced75f7711787e933624797086e15d041ca429818042034a6809b3-40-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xe71d5126150055bc39a9f4904f539c134021d60a59583fc2390ae7198c39f827-369-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '10000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x4f4eff2cfeced379ef8523ca3891fc36eb3e2ff53d0e66adc458c3a94212f0b6-192-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xd4a2507aa2957aa2a914a4146670015fac75095fde89807428e62af6f67bc832-223-0'
+  }
+]
+2022-10-28T23:37:15.750Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xc68824a291433945a1a9f1c15a0703205b897d012d840fe07d763cc2522903d0-296-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x45d4344a0d943f83e2eb51e4a4c2b60549a7b4267a83b7b70f74d10d8ec27cb5-323-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x5a36a9716905205d0920be40c101908f3287698767eca9b02aeb75fb4b94958a-327-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xba4aa224e546ea18897ff78af257edf6f96d1bbe6b4a87adcff071de0cdae1a6-331-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x0e59bc82ffc0a53a98692c632f44090d057fcb4752fc01decffcfa43e3be6d78-345-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xa170b9b0a19f6714207b90c969a572d91ef14641fe54210bf3f4614393b780d6-351-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xf239b75bbe0374831c85403b84aede54563801f69ffd81e7c59c512c2d9603f0-359-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x8be4397d12850c3660c01c8fc61244ccb004c0a0229be81ce5e033d69c503d84-363-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE944f07F9847275C55aC1F919E7476Be1C3bE9B9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x0d1aaff89504b7568448c4f01b5c644b029176e8997632ce2b57c65fff74dab5-367-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x2fcD5b84e04ea940affF17173e67eC64376E1DfC',
+    reward: '2000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x86e7c7dafe4ccd3cfe5d7ef52df09dc08d3636233b9283863505bfb1cfc28a7d-52-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x2fcD5b84e04ea940affF17173e67eC64376E1DfC',
+    reward: '1000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x94709bb616f125078422b75eabd39aebf1519d81fb59f5f4e14d96f754cdfdf9-266-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '5000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x123e5b5853fd474c4909f8456948efdcd29acade9313074ce6f407ea6087d86f-155-0'
+  }
+]
+2022-10-28T23:37:15.751Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '8000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xc420b4e24808d726d97757979cc27ef14d53be930510b1765c4e7d474d07ca86-145-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '3000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x2d997d83b899cdd0e249694b80b09a75a92a050d3ba302d32d8c9be2f76fa255-268-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xA44e6Fc5Be923D6B969dE3252D49d1CF6D1691D6',
+    reward: '3000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x0a5bbae62d894175cec7c2feecf71538ccdc20a8e79c0ed3765610c68f4e9b4f-41-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x75c1bE5eE5E49DB24a449e103bEF656b8268Baeb',
+    reward: '9000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x0ef3a0e479d78ae20bdf3be928f5a622cfba720d3d8286b19721f620bb1a9de2-120-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x75c1bE5eE5E49DB24a449e103bEF656b8268Baeb',
+    reward: '12500000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x2807a4bf7b1292dd527c27a8fa87ad7610abc46a7d93ecf9d4295ab198217383-86-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x75c1bE5eE5E49DB24a449e103bEF656b8268Baeb',
+    reward: '5800000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xa217af3669f958a4fe668ab4a66f489d4bed16970d8b00f214f1ceaf16b916fa-74-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x75c1bE5eE5E49DB24a449e103bEF656b8268Baeb',
+    reward: '5000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x0a42ba8cbdcff2cfc34ee167aee90db225d668f9db4a0640b87670ed2bcfb7cc-176-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x75c1bE5eE5E49DB24a449e103bEF656b8268Baeb',
+    reward: '2100000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x00ed6392290c0936009d915a5af3551457356384a8e1b718a4f7a76188b66b96-493-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xE0A46C097C698e8B14a61b6e9690FA1821aED880',
+    reward: '1000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x164c19f09a89a6eeea073c8531d3327c701c6d03d372ff5bf3aec03f1c55eb12-262-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x6D42004376c019d7a913F5C38B25dD372b517Dc4',
+    reward: '1000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x96f23b9f828603bee26c13a365b24aa7d80e964cdd967fcbc989df63fedc969b-155-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x6D42004376c019d7a913F5C38B25dD372b517Dc4',
+    reward: '1000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x2565004ce7821c141b3f43b4325bc816f25a8fc3447e11731cd3bf0ae2afcfdb-313-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x0Be01F6bcbbc248824Cf39A585E5E65a3f146Cc9',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x58312ad2fbab6d240c37f257f3af5ce58ad79813506c42b20bf302dd12bb65a8-284-0'
+  }
+]
+2022-10-28T23:37:15.752Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xf6103fb20DD14985E53384f05eaD9E2BD1dEDf0F',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xb81661d64808c86ce34a636e7fe5b617b46dc9358cd5880c9f5d698e6ac3927b-358-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xf6103fb20DD14985E53384f05eaD9E2BD1dEDf0F',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0x965e870613782d8359faf103c687e796e3e65b9607d9573b3a98d534b976684a-362-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xf6103fb20DD14985E53384f05eaD9E2BD1dEDf0F',
+    reward: '10000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xa13dc5fcb29911d4f143bf29e4c5a724be9169429657cb318827a99a604dae37-370-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xf6103fb20DD14985E53384f05eaD9E2BD1dEDf0F',
+    reward: '40000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x1d90088bc47f03af57633be84fa7fb22e2a05df349be8a559f27c58a0b28bd21-378-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xf6103fb20DD14985E53384f05eaD9E2BD1dEDf0F',
+    reward: '300000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x1e54d5b7f9b42e9c8bc7028a0ac0a204a712a0c1f3e379e4fe1d283591e0d2af-386-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xf6103fb20DD14985E53384f05eaD9E2BD1dEDf0F',
+    reward: '500000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x0346c0837fafbda437f0659321c95ad69a43263d558e384571147ba053931b5c-394-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xd4cdCf8A66b2eceB2c6Db131B8cBefEeAa18D8Ab',
+    reward: '4000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xcb733597974e54cfe78cb49712d3ff2e328fe49a624a038287345ee4d8e27ee5-283-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x0fB882f1c83a66d584F8fC28b87e5706199487Ed',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xb8b858e496ab735a67ef2a1c9156422a7e38777b5bc5bb333f3b72aaa3a17fc4-463-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x7eec58F777f1920ba4A54B2861597efdc3852DA0',
+    reward: '4000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xc19ff02e91f93979d2650af4844be22600290163817cde68a5b57312f3f9cf09-92-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x7eec58F777f1920ba4A54B2861597efdc3852DA0',
+    reward: '15000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xe5be6b85bb0549d50bf43c328d62957c544fb8176ce4c7789344d878e9cf04ba-98-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xD2D950CeA649fEEf4D6111C18ADBD9a37B3a9f63',
+    reward: '50000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x6c463cfd50f5e6924eed1207957e9823344edc5869689f4b61b8c93da2a6e6db-97-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0xD2D950CeA649fEEf4D6111C18ADBD9a37B3a9f63',
+    reward: '10000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x79cd6fc4340e09526ebaa9c26e7f90cbf62d68e517c4f7f46eebbcae52d8ff76-103-0'
+  }
+]
+2022-10-28T23:37:15.753Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x05d460310a2D785D0bd5b586c8f6402e70366faE',
+    reward: '1000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xc597cf395fa67bde03f78a7b5440a4993cf0ba08b44bd0f812edfdf40a8e20d3-68-0'
+  }
+]
+2022-10-28T23:37:15.754Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x0Ad3062ABfc55fd7Efc8581E0258ff9347933434',
+    reward: '10000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0xf3a09a9ec9aa86c2a7cdcec31c2e1054c8f420860ac87262d356acb6915e992e-100-0'
+  }
+]
+2022-10-28T23:37:15.754Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x5DFa1A7f005b61F26C3f6C227723259f0d890d89',
+    reward: '0',
+    eventType: 'purchase',
+    event_id: 'purchase-0xb00ec503cce1a5c9f798f91898bf79269038a74b7af0b50f5006a4c2c22f3ad3-212-0'
+  }
+]
+2022-10-28T23:37:15.754Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x2fcD5b84e04ea940affF17173e67eC64376E1DfC',
+    reward: '3000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x47dd52c170674c9d4f8ac8aef0cce127b6df527d0fa185acc3ce257b271e8075-257-0'
+  }
+]
+2022-10-28T23:37:15.754Z update on decentraland-polygon-marketplace
+[
+  {
+    walletAddress: '0x2fcD5b84e04ea940affF17173e67eC64376E1DfC',
+    reward: '15000000000000000000',
+    eventType: 'purchase',
+    event_id: 'purchase-0x091bb58e71e94e5d796b1005d6079eb7e0ddf6416c7f1e083a11e05fdcb80714-400-0'
+  }
+]
