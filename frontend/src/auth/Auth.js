@@ -12,9 +12,7 @@ export const Login = () => {
           LOYALTY MODULE
         </h2>
         <p className='font-body text-white w-96 pb-14'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Social engagement module to incentivize users to participate in the Decentraland ecosystem through different onchain and offchain activities.
         </p>
         <ConnectionButton/>
       </div>
