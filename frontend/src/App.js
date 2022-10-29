@@ -1,5 +1,5 @@
 import { Auth } from './auth/Auth'
-import {Dashboard} from './dashboard/Dashboard'
+import { Dashboard } from './dashboard/Dashboard'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -7,11 +7,13 @@ const router = createBrowserRouter([
         path: '/',
         element: <Auth />,
     },
-    { path: '/dashboard',
-  element:<Dashboard/> },
+    {
+        path: '/dashboard',
+        element: <Dashboard />
+    },
 ])
 
-function App() {
+const App = () => {
     return <RouterProvider router={router} />
 }
 
