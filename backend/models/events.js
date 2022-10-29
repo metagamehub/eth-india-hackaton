@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
 			let new_body = {};
 
 			for (let param of param_list) {
-				if (!body[param]) return false;
+				if (!body[param]) {
+					return false;
+				}
 				new_body[param] = body[param];
 			}
 
@@ -33,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
 				allowNull: false,
 			},
 			points_earned: {
-				type: DataTypes.INTEGER,
+				type: DataTypes.BIGINT,
 				allowNull: false,
 			},
 			reclaimed: {
