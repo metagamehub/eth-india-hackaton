@@ -1,10 +1,12 @@
 import React from 'react'
+import { Activity } from '../dashboard/Activity'
+import { Inventory } from '../dashboard/Inventory'
 import { ConnectionButton } from './ConnectionButton'
 
 export const Login = () => {
   return (
     <div className='flex justify-center min-h-screen items-center text-base bg-background text-white'>
-      <div className='text-center'>
+      <div className='text-center pr-10'>
         <h1>
           METAVERSE
         </h1>
@@ -16,6 +18,11 @@ export const Login = () => {
         </p>
         <ConnectionButton/>
       </div>
+      <div className='flex flex-col pb-10'>
+      <Inventory/>
+      <Activity/>
+      </div>
+
     </div>
   )
 }

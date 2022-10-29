@@ -5,7 +5,13 @@ module.exports = {
     extend: {},
     fontFamily: {
       title: ["Anton", "sans-serif"],
-      body: ["Fira Sans", "sans-serif"]
+      anton: ["anton", "sans-serif"],
+      sans: ["Alterwave", "sans-serif"],
+      prompt: ["Prompt", "sans-serif"],
+      lighters: ["Lighters", "sans-serif"],
+      inter: ["Inter", "sans-serif"],
+      thin: ["Alterwave", "sans-serif"],
+      fire: ["FiraSans", "sans-serif"]
     },
     screens: {
       'xs': '400px',
