@@ -38,6 +38,6 @@ app.listen(PORT, async () => {
 	await connectToDatabase().then(async () => {
 		console.log("listening on http://localhost:" + PORT);
 		await loadProposalsandVotes()
-		// index.run();
+		index.run();
 	});
 });
