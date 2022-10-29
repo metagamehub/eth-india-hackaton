@@ -7,14 +7,14 @@ export const Badges = () => {
       <div className='pb-11 pt-6'>
         <h2 className='text-2xl pl-4'>Badges</h2>
         <div className='flex flex-row flex-wrap justify-center'>
-        <Badge text={'The Deployer'}></Badge>
-        <Badge text={'The Deployer'}></Badge>
-        <Badge text={'The Deployer'}></Badge>
-        <Badge text={'The Deployer'}></Badge>
-        <Badge text={'The Deployer'}></Badge>
-        <Badge text={'The Deployer'}></Badge>
-        <Badge text={'The Deployer'}></Badge>
-        <Badge text={'The Deployer'}></Badge>
+        <Badge text={'Blocked'}></Badge>
+        <Badge text={'Blocked'}></Badge>
+        <Badge text={'Blocked'}></Badge>
+        <Badge text={'Blocked'}></Badge>
+        <Badge text={'Blocked'}></Badge>
+        <Badge text={'Blocked'}></Badge>
+        <Badge text={'Blocked'}></Badge>
+        <Badge text={'Blocked'}></Badge>
       </div>
       </div>
     </div>
