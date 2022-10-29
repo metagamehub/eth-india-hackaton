@@ -1,11 +1,18 @@
-import { Login } from "./auth/Auth";
+import { Auth } from './auth/Auth'
+import {Dashboard} from './dashboard/Dashboard'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Auth />,
+    },
+    { path: '/dashboard',
+  element:<Dashboard/> },
+])
 
 function App() {
-  return (
-    <div>
-      <Login></Login>
-    </div>
-  );
+    return <RouterProvider router={router} />
 }
 
-export default App;
+export default App

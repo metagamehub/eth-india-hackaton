@@ -1,21 +1,17 @@
-import React, { useState, useRef } from 'react'
-import { Web3Button, useAccount,useConnectModal } from '@web3modal/react'
+import React from 'react'
+import { useConnectModal } from '@web3modal/react'
 
 export const ConnectionButton = () => {
-    const { isOpen, open, close } = useConnectModal()
+    const { open } = useConnectModal()
     return (
         <>
             <button
                 onClick={() => {
-open()
+                    open()
                 }}
             >
                 Connect Wallet
-       
-            <Web3Button
-                    id="web3Modal"
-                    style={{ display: 'none' }}
-                />     </button>
+            </button>
         </>
     )
 }
