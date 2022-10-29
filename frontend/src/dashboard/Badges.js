@@ -26,12 +26,7 @@ export const Badges = () => {
                             let image =
                                 'https://ipfs.io/ipfs/' +
                                 badge.image.split('ipfs://')[1]
-                            return (
-                                <Badge
-                                    text={badge.name}
-                                    src={image}
-                                ></Badge>
-                            )
+                            return <Badge text={badge.name} src={image}></Badge>
                         })}
                     </div>
                 </div>
