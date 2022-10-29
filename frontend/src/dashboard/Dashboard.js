@@ -17,15 +17,25 @@ export const Dashboard = () => {
         }
     }, [account])
     return (
-        <div className="flex justify-center min-h-screen items-center text-base bg-background text-white">
-            <h1>METAVERSE</h1>
-            <h2 className="pb-20">LOYALTY MODULE</h2>
-            <div className="flex flex-col pb-10">
-            <Badges></Badges>
-            <Leaderboard></Leaderboard>
-            <Inventory/>
-            <Activity />
+        <div className="grid grid-cols-3 grid-rows-3 min-h-screen items-center text-base bg-background text-white">
+            <div className="order-1">
+                <h1>METAVERSE</h1>
+                <h2 className="pb-20">LOYALTY MODULE</h2>
             </div>
+
+            <div className="order-3">
+                <Badges></Badges>
+            </div>
+            <div className="order-6">
+                <Leaderboard></Leaderboard>
+            </div>
+            <div className="order-2"></div>
+            <div className="order-2">
+                <Inventory />
+            </div>
+            <div className="order-4"></div>
+            <div className="order-5"><Activity  /></div>
+            
         </div>
     )
 }
