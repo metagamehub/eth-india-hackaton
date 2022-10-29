@@ -6,7 +6,6 @@ export const ConnectionButton = () => {
     const [authClient, setAuthClient] = useState()
     useEffect(() => {
         ;(async () => {
-          console.log(process.env.REACT_APP_WALLETCONNECT_PROJECT_ID)
             const client = await AuthClient.init({
                 projectId: process.env.REACT_APP_WALLETCONNECT_PROJECT_ID,
                 metadata: {
@@ -15,7 +14,7 @@ export const ConnectionButton = () => {
                     icons: ['https://my-auth-dapp.com/icons/logo.png'],
                 },
             })
-            
+
             client.on('auth_response', ({ params }) => {
               console.log(params)
                 if (Boolean(params.result?.s)) {
