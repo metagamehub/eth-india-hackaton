@@ -15,3 +15,32 @@ h2 {
     @apply font-title text-3xl;
 }
 
+.regularButton button{
+    @apply border-2 w-48 h-12 rounded-xl;
+    background: linear-gradient(123.27deg, #A278F8 23.13%, #0A59AA 72.67%);
+}
+
+.gradientText{
+    @apply font-title text-3xl;
+    background: linear-gradient(116.57deg, #0A59AA 33.33%, #A278F8 89.94%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal{
+    @apply absolute w-80 w-96;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.stats{
+    @apply bg-background h-11 border-2 rounded-xl mx-14 my-2.5 flex flex-nowrap inline-block items-center;
+}
+
+.stats__text{
+    @apply pl-5;
+}
+
+.stats__data{
+    @apply absolute right-20;
+}
+
