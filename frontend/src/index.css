@@ -7,7 +7,7 @@
 h1 {
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 1px;
-    @apply font-title text-background text-4xl; 
+    @apply font-title text-background text-4xl max-h-[6.5rem]; 
 }
 
 
