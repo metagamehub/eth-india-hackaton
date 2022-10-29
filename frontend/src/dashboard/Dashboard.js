@@ -17,7 +17,7 @@ export const Dashboard = () => {
         }
     }, [account])
     return (
-        <div className="grid grid-cols-3 grid-rows-3 min-h-screen items-center text-base bg-background text-white">
+        <div className="grid grid-cols-3 grid-rows-3 min-h-screen items-center text-base bg-background text-white p-5">
             <div className="order-1">
                 <h1>METAVERSE</h1>
                 <h2 className="pb-20">LOYALTY MODULE</h2>
