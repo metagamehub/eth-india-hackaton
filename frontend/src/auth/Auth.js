@@ -19,8 +19,6 @@ export const Login = () => {
         <ConnectionButton/>
       </div>
       <div className='flex flex-col pb-10'>
-      <Inventory/>
-      <Activity/>
       </div>
 
     </div>
