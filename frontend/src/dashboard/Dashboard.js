@@ -17,23 +17,24 @@ export const Dashboard = () => {
         }
     }, [account])
     return (
-        <div className="grid grid-cols-3 grid-rows-3 min-h-screen items-center text-base bg-background text-white">
-            <div className="order-1">
+        <div className="grid grid-row-8 grid-cols-3 gap-4 min-h-screen text-base bg-background text-white">
+            <div>
                 <h1>METAVERSE</h1>
-                <h2 className="pb-20">LOYALTY MODULE</h2>
+                <h2>LOYALTY MODULE</h2>
             </div>
-
-            <div className="order-3">
-                <Badges></Badges>
+            <iframe className='row-span-6' src="https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17 17 17 / var(--tw-bg-opacity))&ov=true" width="100%" height="100%"></iframe>
+            
+            <div className='row-span-3'>
+            <Inventory/>
             </div>
-            <div className="order-6">
-                <Leaderboard></Leaderboard>
+            <div className='row-span-2'>
+            <Badges/>
             </div>
-            <div className="order-2">
-                <Inventory />
+            <div className='row-span-2'>
+            <Leaderboard/>
             </div>
-            <iframe className="order-1 row-span-3" src="https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17 17 17 / var(--tw-bg-opacity))&ov=true" width="100%" height="100%"></iframe>
-            <div className="order-5"><Activity  /></div>
+            
+            <Activity  />
             
         </div>
     )
