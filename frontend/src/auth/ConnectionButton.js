@@ -15,6 +15,7 @@ export const ConnectionButton = () => {
                     icons: ['https://my-auth-dapp.com/icons/logo.png'],
                 },
             })
+            
             client.on('auth_response', ({ params }) => {
               console.log(params)
                 if (Boolean(params.result?.s)) {
