@@ -6,6 +6,7 @@ export const ConnectionButton = () => {
     const [authClient, setAuthClient] = useState()
     useEffect(() => {
         ;(async () => {
+          console.log(process.env.REACT_APP_WALLETCONNECT_PROJECT_ID)
             const client = await AuthClient.init({
                 projectId: process.env.REACT_APP_WALLETCONNECT_PROJECT_ID,
                 metadata: {
