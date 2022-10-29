@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {},
     fontFamily: {
@@ -14,6 +14,20 @@ module.exports = {
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px'
+    },
+    colors:{
+      'background': '#111111',
+      'grey': '#292929',
+      'white': '#ffffff',
+      'tahiti': '#3ab7bf',
+    },
+    fontSize: {
+      'sm': '0.8rem',
+      'base': '1rem',
+      'xl': '1.25rem',
+      '2xl': '1.563rem',
+      '3xl': '3rem',
+      '4xl': '6rem',
     }
   },
   plugins: [],

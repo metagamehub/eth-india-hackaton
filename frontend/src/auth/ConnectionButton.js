@@ -31,7 +31,7 @@ export const ConnectionButton = () => {
     return (
         (authClient && (
             <button
-                className="stroke-black"
+            className="pt-1 z-10 border-solid border-2 w-48 h-12 rounded-xl border-white"
                 onClick={async () => {
                     const { uri } = await authClient.request({
                         aud: '<FULL_URL_OF_LOGIN_PAGE>',
