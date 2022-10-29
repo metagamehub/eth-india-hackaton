@@ -6,18 +6,16 @@ export const ConnectionButton = () => {
     const [authClient, setAuthClient] = useState()
     useEffect(() => {
         ;(async () => {
-          console.log(window.location.host)
             const client = await AuthClient.init({
-                projectId: process.env.WALLETCONNECT_PROJECT_ID,
-                relayUrl:"wss://relay.walletconnect.com",
+                projectId: process.env.REACT_APP_WALLETCONNECT_PROJECT_ID,
                 metadata: {
                     name: 'eth-lisbon-hackaton',
                     description: 'A dapp using WalletConnect AuthClient',
-                    url: window.location.host,
                     icons: ['https://my-auth-dapp.com/icons/logo.png'],
                 },
             })
             client.on('auth_response', ({ params }) => {
+              console.log(params)
                 if (Boolean(params.result?.s)) {
                     // Response contained a valid signature -> user is authenticated.
                 } else {
@@ -31,12 +29,15 @@ export const ConnectionButton = () => {
     return (
         (authClient && (
             <button
-            className="pt-1 z-10 border-solid border-2 w-48 h-12 rounded-xl border-white"
+                className="pt-1 z-10 border-solid border-2 w-48 h-12 rounded-xl border-white"
                 onClick={async () => {
                     const { uri } = await authClient.request({
-                        aud: '<FULL_URL_OF_LOGIN_PAGE>',
-                        domain: '<YOUR_DOMAIN>',
-                        chainId: 'eip155:1',
+                        aud: window.location.href,
+                        domain: window.location.hostname
+                            .split('.')
+                            .slice(-2)
+                            .join('.'),
+                        chainId: 'eip155:137',
                         nonce: generateNonce(),
                     })
                     if (uri) {

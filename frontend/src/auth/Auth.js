@@ -16,7 +16,7 @@ export const Login = () => {
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-        <ConnectionButton></ConnectionButton>
+        <ConnectionButton/>
       </div>
     </div>
   )
