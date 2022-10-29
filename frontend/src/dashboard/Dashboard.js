@@ -23,7 +23,7 @@ export const Dashboard = () => {
                 <h1>METAVERSE</h1>
                 <h2>LOYALTY MODULE</h2>
             </div>
-            <iframe className='row-span-6' src="https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17 17 17 / var(--tw-bg-opacity))&ov=true" width="100%" height="100%"></iframe>
+            <iframe className='row-span-4' src="https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17 17 17 / var(--tw-bg-opacity))&ov=true" width="100%" height="100%"></iframe>
             
             <div className='row-span-3'>
             <Inventory/>
