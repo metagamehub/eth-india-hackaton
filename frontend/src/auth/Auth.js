@@ -6,7 +6,7 @@ import { ConnectionButton } from './ConnectionButton'
 export const Login = () => {
   return (
     <div className='flex justify-center min-h-screen items-center text-base bg-background text-white'>
-      <div className='text-center pr-10'>
+      <div className='text-center'>
         <h1>
           METAVERSE
         </h1>
