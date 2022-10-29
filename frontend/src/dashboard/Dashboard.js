@@ -5,6 +5,7 @@ import { Activity } from '../dashboard/Activity'
 import { Inventory } from '../dashboard/Inventory'
 import { Badges } from './Badges'
 import { Leaderboard } from './Leaderboard'
+import { LevelProgress } from './LevelProgress'
 
 export const Dashboard = () => {
     const navigate = useNavigate()
@@ -17,7 +18,7 @@ export const Dashboard = () => {
         }
     }, [account])
     return (
-        <div className="grid grid-row-8 grid-cols-3 gap-4 min-h-screen text-base bg-background text-white">
+        <div className="grid grid-row-8 grid-cols-3 gap-4 min-h-screen text-base bg-background text-white p-12">
             <div>
                 <h1>METAVERSE</h1>
                 <h2>LOYALTY MODULE</h2>
@@ -33,9 +34,10 @@ export const Dashboard = () => {
             <div className='row-span-2'>
             <Leaderboard/>
             </div>
-            
             <Activity  />
-            
+            <div className="row-span-2">
+                <LevelProgress progress='60' points={418} level={8}/>
+            </div>
         </div>
     )
 }
