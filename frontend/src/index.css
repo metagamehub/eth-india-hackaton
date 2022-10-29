@@ -10,7 +10,6 @@ h1 {
     @apply font-title text-background text-4xl max-h-[6.5rem]; 
 }
 
-
 h2 {
     @apply font-title text-3xl;
 }
@@ -21,10 +20,14 @@ h2 {
 }
 
 .gradientText{
-    @apply font-title text-3xl;
+    @apply font-title;
     background: linear-gradient(116.57deg, #0A59AA 33.33%, #A278F8 89.94%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.progressbar {
+    background: linear-gradient(116.57deg, #0A59AA 33.33%, #A278F8 89.94%)
 }
 
 .modal{
@@ -33,7 +36,7 @@ h2 {
 }
 
 .stats{
-    @apply bg-background h-11 border-2 rounded-xl mx-14 my-2.5 flex flex-nowrap inline-block items-center;
+    @apply bg-background h-11 border-2 rounded-xl mx-14 my-2.5 flex flex-nowrap inline-block;
 }
 
 .stats__text{
