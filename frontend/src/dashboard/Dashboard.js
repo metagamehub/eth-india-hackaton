@@ -29,11 +29,10 @@ export const Dashboard = () => {
             <div className="order-6">
                 <Leaderboard></Leaderboard>
             </div>
-            <div className="order-2"></div>
             <div className="order-2">
                 <Inventory />
             </div>
-            <div className="order-4"></div>
+            <iframe className="order-1 row-span-3" src="https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17 17 17 / var(--tw-bg-opacity))&ov=true" width="100%" height="100%"></iframe>
             <div className="order-5"><Activity  /></div>
             
         </div>
