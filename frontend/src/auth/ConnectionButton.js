@@ -37,7 +37,6 @@ export const ConnectionButton = () => {
                             .split('.')
                             .slice(-2)
                             .join('.'),
-                            
                         chainId: 'eip155:137',
                         nonce: generateNonce(),
                     })
