@@ -28,10 +28,11 @@ module.exports = {
       'tahiti': '#3ab7bf',
     },
     fontSize: {
+      's': '0.5rem',
       'sm': '0.8rem',
       'base': '1rem',
-      'xl': '1.25rem',
-      '2xl': '1.563rem',
+      'xl': '1.5rem',
+      '2xl': '2.25rem',
       '3xl': '3rem',
       '4xl': '6rem',
     }
