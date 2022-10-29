@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useAccount } from '@web3modal/react'
 import { Activity } from '../dashboard/Activity'
 import { Inventory } from '../dashboard/Inventory'
+import { Badges } from './Badges'
+import { Leaderboard } from './Leaderboard'
 
 export const Dashboard = () => {
     const navigate = useNavigate()
@@ -19,8 +21,10 @@ export const Dashboard = () => {
             <h1>METAVERSE</h1>
             <h2 className="pb-20">LOYALTY MODULE</h2>
             <div className="flex flex-col pb-10">
-                <Activity />
-                <Inventory />
+            <Badges></Badges>
+            <Leaderboard></Leaderboard>
+            <Inventory/>
+            <Activity />
             </div>
         </div>
     )
