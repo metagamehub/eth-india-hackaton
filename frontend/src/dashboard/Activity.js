@@ -6,11 +6,11 @@ export const Activity = () => {
     <div className="flex flex-col space-y-3 w-90 text-white">
       <h2 className="text-8xl">ACTIVITY</h2>
       <div className="flex h-10 bg-grey rounded-[25px] space-x-0 justify-between">
-          <p className="font-fire text-md py-2 pl-4">Bought weareable xyz</p>
+          <p className="font-fire text-md py-2 pl-4">Bought weareable</p>
           <Button text="DCLAND" />
       </div>
       <div className="flex h-10 bg-grey rounded-[25px] space-x-0 justify-between">
-          <p className="font-fire text-md py-2 pl-4">Entered event xyz</p>
+          <p className="font-fire text-md py-2 pl-4">Entered event</p>
             <Button text="DCLAND" />
       </div>
       <div className="flex h-10 bg-grey rounded-[25px] space-x-0 justify-between">

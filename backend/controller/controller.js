@@ -1,4 +1,5 @@
 const { Events } = require("./../models");
+
 module.exports = {
 	create: async function (req, res) {
 		try {
@@ -33,11 +34,13 @@ module.exports = {
 	// update by event_id or walletAddress
 	update: async function (req, res) {
 		try {
-			const { event_id, walletAddress } = req.body;
-			if (event_id) await Events.update({ where: { event_id: event_id } });
-			else if (walletAddress)
-				await Events.update({ where: { "metadata.walletAddress": walletAddress } });
-			else return res.status(400).json({ msg: "invalid parameters" });
+			const { event_id, metadata, reclaimed } = req.body;
+			let item;
+			if (metadata)
+				item = await Events.update({ metadata: metadata }, { where: { event_id: event_id } });
+			if (reclaimed)
+				item = await Events.update({ reclaimed: reclaimed }, { where: { event_id: event_id } });
+			if (!item) return res.status(400).json({ msg: "invalid parameters" });
 			return res.status(200).json(item);
 		} catch (error) {
 			console.error(error);
@@ -57,6 +60,65 @@ module.exports = {
 		} catch (error) {
 			console.error(error);
 			return res.status(400).json({ msg: error.message });
+		}
+	},
+
+
+	//internals
+	createSelfFromIndexer: async function (request) {
+		try {
+			for (element of request) {
+				const { walletAddress, eventType, event_id } = element;
+				let points_earned;
+				if (await Events.findOne({ where: { event_id: event_id } })) {
+					// console.log(">> event with id:", event_id, "has already been inserted");
+					return "already inserted";
+				}
+				if (eventType == "purchase") {
+					points_earned = "10";
+				}
+				let body = {
+					event_id: event_id,
+					reclaimed: "false",
+					points_earned: points_earned,
+					metadata: {
+						walletAddress: walletAddress,
+						eventType: eventType,
+					},
+				};
+				const itemRequest = Events.checkPostParams(body);
+				if (!itemRequest) return "incomplete parameters";
+				const item = Events.build(itemRequest);
+				await item.save();
+			}
+			return "true";
+		} catch (error) {
+			console.error(error);
+			return error.message;
+		}
+	},
+
+	createSelfFromDAO: async function (request) {
+		try {
+			const { metadata, points_earned, event_id } = request;
+			if (await Events.findOne({ where: { event_id: event_id } })) {
+				// console.log(">> event with id:", event_id, "has already been inserted");
+				return "already inserted";
+			}
+			let body = {
+				event_id: event_id,
+				reclaimed: "false",
+				points_earned: points_earned,
+				metadata: metadata,
+			};
+			const itemRequest = Events.checkPostParams(body);
+			if (!itemRequest) return "incomplete parameters";
+			const item = Events.build(itemRequest);
+			await item.save();
+			return "true";
+		} catch (error) {
+			console.error(error);
+			return error.message;
 		}
 	},
 };
