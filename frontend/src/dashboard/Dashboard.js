@@ -28,19 +28,20 @@ export const Dashboard = () => {
             <div className='row-span-3'>
               <Inventory/>
             </div>
-            <div className="row-span-2">
+            <div className="row-span-4">
               <Badges />
             </div>
             <div className="row-span-3">
-              <Leaderboard />
+            <Activity/>
             </div>
             <div className="row-span-4">
-              <Activity/>
+            <Leaderboard />
+              
             </div>
             <div className="col-start-2">
               <LevelProgress progress='60' points={418} level={8}/>
             </div>
-            <div className='regularButton col-start-3 text-center'>
+            <div className='regularButton col-start-3 text-center relative bottom-[50%]'>
               <button className=''>Disconect Wallet</button>
             </div>
         </div>
