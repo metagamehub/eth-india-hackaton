@@ -6,7 +6,7 @@ const abi_badges = [
     'function mintBadge(address recipient, uint256 id)',
 ]
 export const getBalance = async (walletAddress, provider) => {
-    console.log("BALANCE",walletAddress,provider)
+
     const badges_contract = new Contract(
         badges_contract_address,
         abi_badges,

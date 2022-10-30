@@ -34,7 +34,7 @@ export const Badges = () => {
                 userBadges,
             })
         }
-        if(provider)getBadges()
+        if (provider) getBadges()
     }, [provider])
 
     useEffect(() => {
