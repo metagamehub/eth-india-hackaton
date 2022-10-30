@@ -23,20 +23,25 @@ export const Dashboard = () => {
                 <h1>METAVERSE</h1>
                 <h2>LOYALTY MODULE</h2>
             </div>
-            <iframe className='row-span-4' src="https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17 17 17 / var(--tw-bg-opacity))&ov=true" width="100%" height="100%"></iframe>
+            <iframe className='row-span-5' src="https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17 17 17 / var(--tw-bg-opacity))&ov=true" width="100%" height="100%"></iframe>
             
             <div className='row-span-3'>
-            <Inventory/>
+              <Inventory/>
             </div>
             <div className="row-span-2">
-                <Badges />
+              <Badges />
             </div>
-            <div className="row-span-2">
-                <Leaderboard />
+            <div className="row-span-3">
+              <Leaderboard />
             </div>
-            <Activity  />
-            <div className="row-span-2">
-                <LevelProgress progress='60' points={418} level={8}/>
+            <div className="row-span-4">
+              <Activity/>
+            </div>
+            <div className="col-start-2">
+              <LevelProgress progress='60' points={418} level={8}/>
+            </div>
+            <div className='regularButton col-start-3 text-center'>
+              <button className=''>Disconect Wallet</button>
             </div>
         </div>
     )

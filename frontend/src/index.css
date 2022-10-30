@@ -16,7 +16,7 @@ h2 {
 
 .regularButton button{
     @apply border-2 w-48 h-12 rounded-xl;
-    background: linear-gradient(123.27deg, #A278F8 23.13%, #0A59AA 72.67%);
+    background: linear-gradient(123.27deg, #A278F8 23.13%, #0A59AA 72.67%) !important;
 }
 
 .gradientText{
