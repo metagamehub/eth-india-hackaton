@@ -1,4 +1,5 @@
-const { Events } = require("./../models");
+const { Events, sequelize, Sequelize } = require("./../models");
+const { Op } = require("sequelize");
 
 module.exports = {
 	create: async function (req, res) {
@@ -23,6 +24,85 @@ module.exports = {
 			else if (walletAddress)
 				item = await Events.findOne({ where: { "metadata.walletAddress": walletAddress } });
 			else return res.status(400).json({ msg: "invalid parameters" });
+			if (!item) return res.status(400).json({ msg: "item not found" });
+			return res.status(200).json(item);
+		} catch (error) {
+			console.error(error);
+			return res.status(400).json({ msg: error.message });
+		}
+	},
+
+	readAllWalletEvents: async function (req, res) {
+		try {
+			const { walletAddress } = req.query;
+			const item = await Events.findAll({ where: { "metadata.walletAddress": walletAddress } });
+			if (!item) return res.status(400).json({ msg: "item not found" });
+			return res.status(200).json(item);
+		} catch (error) {
+			console.error(error);
+			return res.status(400).json({ msg: error.message });
+		}
+	},
+
+	readPurchases: async function (req, res) {
+		try {
+			const { walletAddress } = req.query;
+			const item = await Events.findAll({
+				where: {
+					[Op.and]: [
+						{ "metadata.walletAddress": walletAddress },
+						{ "metadata.eventType": "purchase" },
+					],
+				},
+			});
+			if (!item) return res.status(400).json({ msg: "item not found" });
+			return res.status(200).json(item);
+		} catch (error) {
+			console.error(error);
+			return res.status(400).json({ msg: error.message });
+		}
+	},
+
+	readVotes: async function (req, res) {
+		try {
+			const { walletAddress } = req.query;
+			const item = await Events.findAll({
+				where: {
+					[Op.and]: [{ "metadata.walletAddress": walletAddress }, { "metadata.eventType": "vote" }],
+				},
+			});
+			if (!item) return res.status(400).json({ msg: "item not found" });
+			return res.status(200).json(item);
+		} catch (error) {
+			console.error(error);
+			return res.status(400).json({ msg: error.message });
+		}
+	},
+
+	readProposal: async function (req, res) {
+		try {
+			const { walletAddress } = req.query;
+			const item = await Events.findAll({
+				where: {
+					[Op.and]: [
+						{ "metadata.walletAddress": walletAddress },
+						{ "metadata.eventType": "proposal" },
+					],
+				},
+			});
+			if (!item) return res.status(400).json({ msg: "item not found" });
+			return res.status(200).json(item);
+		} catch (error) {
+			console.error(error);
+			return res.status(400).json({ msg: error.message });
+		}
+	},
+
+	readTop: async function (req, res) {
+		try {
+			const item = await sequelize.query(
+				"SELECT metadata->>'walletAddress' , SUM(points_earned) FROM 'Events' GROUP BY metadata ORDER BY SUM(points_earned) DESC LIMIT 5;"
+			);
 			if (!item) return res.status(400).json({ msg: "item not found" });
 			return res.status(200).json(item);
 		} catch (error) {
@@ -62,7 +142,6 @@ module.exports = {
 			return res.status(400).json({ msg: error.message });
 		}
 	},
-
 
 	//internals
 	createSelfFromIndexer: async function (request) {

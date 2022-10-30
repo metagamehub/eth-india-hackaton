@@ -37,7 +37,7 @@ async function loadProposalsandVotes() {
 app.listen(PORT, async () => {
 	await connectToDatabase().then(async () => {
 		console.log("listening on http://localhost:" + PORT);
-		await loadProposalsandVotes()
+		await loadProposalsandVotes();
 		index.run();
 	});
 });
