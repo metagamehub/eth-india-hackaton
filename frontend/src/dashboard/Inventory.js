@@ -36,7 +36,7 @@ export const Inventory = () => {
                                     </svg>
                                     Loading...
                                 </div>
-                                <p className="w-full text-center text-white">This may take a few seconds.</p>
+                                <p className="w-full text-center text-white truncate">This may take a few seconds.</p>
                             </div>
                         ) : (
                             <div className="grid grid-cols-2 place-content-center max-w-full items-center">

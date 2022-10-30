@@ -16,6 +16,11 @@ h2 {
     @apply font-title text-3xl;
 }
 
+p {
+    @apply font-fire;
+    @layer text-md 
+}
+
 .regularButton button{
     @apply border-2 w-48 h-12 rounded-xl;
     background: linear-gradient(123.27deg, #A278F8 23.13%, #0A59AA 72.67%) !important;
@@ -33,19 +38,19 @@ h2 {
 }
 
 .modal{
-    @apply absolute w-80 w-96;
+    @apply fixed top-0 left-0 flex items-center justify-center h-screen w-screen z-50;
     background: rgba(0, 0, 0, 0.15);
 }
 
 .stats{
-    @apply bg-background h-11 border-2 rounded-xl mx-14 my-2.5 flex flex-nowrap inline-block;
+    @apply bg-background h-11 border-2 rounded-xl mx-12 my-2.5 flex flex-nowrap inline-block;
 }
 
 .stats__text{
-    @apply pl-5;
+    @apply pl-5 py-2;
 }
 
 .stats__data{
-    @apply absolute right-20;
+    @apply absolute py-2 right-20;
 }
 
