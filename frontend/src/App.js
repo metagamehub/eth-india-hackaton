@@ -1,7 +1,8 @@
 import { Auth } from './auth/Auth'
 import {Dashboard} from './dashboard/Dashboard'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
+import { Provider } from 'react-redux'
+import store from './state/store'
 const router = createBrowserRouter([
     {
         path: '/',
@@ -12,7 +13,8 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-    return <RouterProvider router={router} />
+
+    return <Provider store={store}><RouterProvider router={router} /></Provider>
 }
 
 export default App

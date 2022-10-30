@@ -1,16 +1,18 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { ConnectionButton } from './ConnectionButton'
 import { useNavigate } from 'react-router-dom'
 import { useAccount } from '@web3modal/react'
+import { useDispatch } from 'react-redux'
+import { connect } from '../state/wallet'
 
 export const Auth = () => {
     const navigate = useNavigate()
     const { account } = useAccount()
-
+    const dispatch = useDispatch()
 
     useEffect(() => {
         {
-            account.isConnected && navigate('/dashboard',{replace:true})
+            account.isConnected && dispatch(connect({ address: account.address })) && navigate('/dashboard', { replace: true })
         }
     }, [account])
     return (

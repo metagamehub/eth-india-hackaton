@@ -1,12 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import { AccountState } from "../lib/types";
-
-
 const initialState = { 
     connected: false, 
     address: undefined,
-    chainId: 1
 }
 
 export const accountSlice = createSlice({
@@ -16,7 +12,6 @@ export const accountSlice = createSlice({
     connect: (state, {payload}) => {
         state.connected = true
         state.address = payload.address
-        state.chainId = payload.chainId
         
     },
     disconnect: state => initialState,
@@ -29,7 +24,6 @@ export const accountSlice = createSlice({
   }
 })
 
-// Action creators are generated for each case reducer function
 export const { connect, disconnect, setChain, setAddress } = accountSlice.actions
 
 export default accountSlice.reducer
