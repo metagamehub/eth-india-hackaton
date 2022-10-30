@@ -4,16 +4,13 @@ import { useNavigate } from 'react-router-dom'
 import { useAccount } from '@web3modal/react'
 import { useDispatch } from 'react-redux'
 import { connect } from '../state/wallet'
-import { ConnectionButton } from './ConnectionButton'
-import { useNavigate } from 'react-router-dom'
-import { useAccount } from '@web3modal/react'
 import { Web3Modal } from '@web3modal/react'
 
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-import { ParticlesOne, ParticlesTwo } from '../lib/particles-config'
+import { ParticlesOne, ParticlesTwo, ParticlesThree } from '../lib/particles-config'
 import './Particles.css'
 
 export const Auth = () => {
@@ -38,7 +35,7 @@ export const Auth = () => {
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
-                options={ParticlesOne}
+                options={ParticlesThree}
                 className='particles'
             />
             <div className="flex justify-center min-h-screen items-center text-base text-white z-10">
