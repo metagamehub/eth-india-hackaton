@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Wearable } from '../components/wearable'
 import axios from 'axios'
-import { useSelector } from 'react-redux'
 import { useAccount } from '@web3modal/react'
 
 export const Inventory = () => {
     const [wearables, setWearables] = useState()
-    const wallet = useSelector((state) => state.wallet)
     const { account } = useAccount()
     useEffect(() => {
         const getWearables = async () => {
@@ -21,7 +19,6 @@ export const Inventory = () => {
                 ).data.wearables
             )
         }
-        console.log(account)
         if (account.isConnected) getWearables()
     }, [account])
     return (
