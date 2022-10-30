@@ -15,13 +15,18 @@ app.use(express.urlencoded({ limit: "5gb", extended: true }));
 app.use("/", routes);
 
 async function connectToDatabase() {
-	try {
-		await sequelize
-			.authenticate()
-			.then(console.log(new Date().toISOString() + "> Database connected"));
-	} catch (error) {
-		console.log("got error in database connection", error);
-	}
+	try{
+        setTimeout(async ()=>{
+            await sequelize.authenticate();
+            console.log(new Date().toISOString()+"> Database connected");
+        }, 5000)
+    } catch(error){
+        console.log("got error in database connection", error);
+        setTimeout(async ()=>{
+            await sequelize.authenticate();
+            console.log(new Date().toISOString()+"> Database connected");
+        }, 5000)
+    }
 }
 
 async function loadProposalsandVotes() {

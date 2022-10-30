@@ -101,10 +101,10 @@ module.exports = {
 	readTop: async function (req, res) {
 		try {
 			const item = await sequelize.query(
-				"SELECT metadata->>'walletAddress' , SUM(points_earned) FROM 'Events' GROUP BY metadata ORDER BY SUM(points_earned) DESC LIMIT 5;"
+				`SELECT metadata->>'walletAddress' , SUM(points_earned) FROM "Events" GROUP BY metadata ORDER BY SUM(points_earned) DESC LIMIT 5`
 			);
 			if (!item) return res.status(400).json({ msg: "item not found" });
-			return res.status(200).json(item);
+			return res.status(200).json(item[0]);
 		} catch (error) {
 			console.error(error);
 			return res.status(400).json({ msg: error.message });
