@@ -235,16 +235,17 @@ module.exports = {
             })
             if (!items) return res.status(400).json({ msg: 'item not found' })
             let total_points = 0
-            items.forEach((item) => {
-                total_points += item.points_earned
-                Events.update(
-                    { reclaimed: reclaimed },
+            for (let item of items) {
+                total_points += parseInt(item.points_earned)
+                await Events.update(
+                    { reclaimed: true },
                     { where: { event_id: item.event_id } }
                 )
-            })
+            }
+            console.log(total_points, 'POINTS')
             if (total_points > 0) mintTokens(walletAddress, total_points)
             else
-                return res.send
+                return res
                     .status(400)
                     .json({ msg: "You don't have any tokens to claim" })
             return res.status(200).json(total_points)

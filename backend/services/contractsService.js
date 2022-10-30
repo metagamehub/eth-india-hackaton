@@ -14,12 +14,19 @@ const badges_abi = [
     'function balanceOfBatch(address[] accounts, uint256[] ids) view returns(uint256[])',
 ]
 
-const mlp_contract = new Contract(mlp_contract_address, mlp_abi)
-const badges_contract = new Contract(badges_contract_address, badges_abi)
+const mlp_contract = new Contract(mlp_contract_address, mlp_abi, signer)
+const badges_contract = new Contract(
+    badges_contract_address,
+    badges_abi,
+    signer
+)
 
 const mintTokens = async (address, token_amount) => {
     try {
-        await mlp_contract.addPoints(address, token_amount, '')
+        console.log(address)
+        await mlp_contract.addPoints(address, token_amount, '0x', {
+            gasPrice: 50000000000,
+        })
     } catch (err) {
         console.log(err)
     }
@@ -27,7 +34,8 @@ const mintTokens = async (address, token_amount) => {
 
 const mintBadges = async (address, id) => {
     try {
-        await badges_contract.mintBadge(address, id)
+        await badges_contract.mintBadge(address, id,
+            { gasPrice: 70000000000 })
     } catch (err) {
         console.log(err)
     }

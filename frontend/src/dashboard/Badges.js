@@ -79,11 +79,24 @@ export const Badges = () => {
                 <div className="bg-grey text-white max-w-full h-72 rounded-2xl space-y-3">
                     <div className="pb-11 pt-6">
                         <h2 className="text-2xl pl-4">Badges</h2>
+                        <button
+                            className="ml-4 z-10 border-solid border-2 w-24 h-7 text-[17px] rounded-xl border-white hover:border-tahiti hover:text-tahiti"
+                            onClick={() =>
+                                axios.post(
+                                    process.env
+                                        .REACT_APP_WALLETCONNECT_BACKEND_URL +
+                                        '/db/claimBadges?walletAddress=' +
+                                        wallet.address
+                                )
+                            }
+                        >
+                            Claim all
+                        </button>
                         <div className="flex flex-row flex-wrap justify-center">
                             {badges.badges.map((badge, index) => {
                                 const { userBadges } = badges
                                 let image
-                                if (userBadges && userBadges[index] == 1)
+                                if (userBadges && userBadges[index] >= 1)
                                     image =
                                         'https://ipfs.io/ipfs/' +
                                         badge.image.split('ipfs://')[1]
