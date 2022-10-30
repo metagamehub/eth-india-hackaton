@@ -4,9 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { useAccount } from '@web3modal/react'
 import { useDispatch } from 'react-redux'
 import { connect } from '../state/wallet'
-import { ConnectionButton } from './ConnectionButton'
-import { useNavigate } from 'react-router-dom'
-import { useAccount } from '@web3modal/react'
 import { Web3Modal } from '@web3modal/react'
 
 import { useCallback } from "react";
