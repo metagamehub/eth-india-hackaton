@@ -17,7 +17,7 @@ h2 {
 }
 
 p {
-    @apply font-fire truncate;
+    @apply font-fire;
     @layer text-md 
 }
 

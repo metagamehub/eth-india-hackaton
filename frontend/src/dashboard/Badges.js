@@ -32,7 +32,7 @@ export const Badges = () => {
                                         </svg>
                                         Loading...
                                     </div>
-                                    <p className="w-full text-center text-white">This may take a few seconds.</p>
+                                    <p className="w-full text-center text-white truncate">This may take a few seconds.</p>
                                 </div>
                             </div>
                         </div>
