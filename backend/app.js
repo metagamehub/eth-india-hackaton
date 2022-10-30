@@ -3,13 +3,13 @@ const cors = require("cors");
 const routes = require("./routes/routes");
 const { sequelize } = require("./models");
 const decentralandDAO = require("./services/decentralandDAO");
-const index = require("../indexer/index");
+const index = require("./indexer/index");
 const schedule = require("node-schedule-tz");
 const PORT = process.env.PORT || "3001";
 
 const app = express();
 
-var whitelist = ["http://localhost:3000"];
+var whitelist = ["http://localhost:3000", "https://eth-lisbon-hackaton.vercel.app/"];
 
 function isOriginAllowed(origin) {
 	console.log("Origin Allowed: ", origin, whitelist.indexOf(origin) !== -1);
