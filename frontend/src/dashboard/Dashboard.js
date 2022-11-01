@@ -47,10 +47,7 @@ export const Dashboard = () => {
             <div className="row-span-4">
                 <Leaderboard />
             </div>
-            <div className="col-start-2">
-                <LevelProgress progress="60" points={418} level={8} />
-            </div>
-            <div className="flex regularButton col-start-3 text-center relative bottom-[50%]">
+            <div className="flex regularButton col-start-3 row-span-3 text-center relative">
                 <button
                     onClick={() => {
                         dispatch(disconnect())
@@ -58,9 +55,13 @@ export const Dashboard = () => {
                         
                     }}
                 >
-                    Disconect Wallet
+                    Disconnect Wallet
                 </button>
+            </div> 
+            <div className="col-start-2">
+                <LevelProgress progress="60" points={418} level={8} />
             </div>
+
         </div>
     )
 }
