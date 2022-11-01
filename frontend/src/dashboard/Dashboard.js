@@ -23,8 +23,8 @@ export const Dashboard = () => {
         }
     }, [account])
     return (
-        <div className="grid grid-row-8 grid-cols-3 gap-4 min-h-screen text-base bg-background text-white p-12">
-            <div>
+        <div className="grid grid-row-8 grid-cols-3 gap-4 min-h-screen text-base bg-background text-white pr-9 pt-9 space-x-9">
+            <div className='row-span-1 space-x-9'>
                 <h1>METAVERSE</h1>
                 <h2>LOYALTY MODULE</h2>
             </div>
@@ -50,7 +50,7 @@ export const Dashboard = () => {
             <div className="col-start-2">
                 <LevelProgress progress="60" points={418} level={8} />
             </div>
-            <div className="regularButton col-start-3 text-center relative bottom-[50%]">
+            <div className="flex regularButton col-start-3 text-center relative bottom-[50%]">
                 <button
                     onClick={() => {
                         dispatch(disconnect())

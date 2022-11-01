@@ -9,6 +9,10 @@
 h1 {
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 1px;
+    padding-right: 2.25rem;
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.25rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.25rem * calc(1 - var(--tw-space-x-reverse)));
     @apply font-title text-background text-4xl max-h-[6.5rem]; 
 }
 
@@ -22,7 +26,7 @@ p {
 }
 
 .regularButton button{
-    @apply border-2 w-48 h-12 rounded-xl;
+    @apply w-[100%] h-16 rounded-xl;
     background: linear-gradient(123.27deg, #A278F8 23.13%, #0A59AA 72.67%) !important;
 }
 

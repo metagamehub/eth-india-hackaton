@@ -9,9 +9,9 @@ export const LevelProgress = ({ progress, points, level }) => {
     const wallet = useSelector((state) => state.wallet)
     const [balance, setBalance] = useState()
     const Parentdiv = {
-        height: '18px',
+        height: '12px',
         width: '100%',
-        backgroundColor: 'whitesmoke',
+        backgroundColor: '#292929',
         borderRadius: 5,
     }
 
@@ -24,7 +24,6 @@ export const LevelProgress = ({ progress, points, level }) => {
 
     const progresstext = {
         padding: 10,
-        color: 'black',
         fontWeight: 900,
     }
     useEffect(() => {
