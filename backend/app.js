@@ -9,7 +9,7 @@ const PORT = process.env.PORT || "3001";
 
 const app = express();
 
-var whitelist = ["http://localhost:3000", "https://eth-lisbon-hackaton.vercel.app/"];
+var whitelist = ["https://eth-lisbon-hackaton.vercel.app/","https://eth-lisbon-hackaton.vercel.app", "http://localhost:3000"];
 
 function isOriginAllowed(origin) {
 	console.log("Origin Allowed: ", origin, whitelist.indexOf(origin) !== -1);
