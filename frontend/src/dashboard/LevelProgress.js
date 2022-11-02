@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useAccount } from '@web3modal/react'
 import { useProvider } from '@web3modal/react'
 import { getBalance as getMLPBalance } from '../services/MLPContractService'
 import { useSelector } from 'react-redux'
 
-export const LevelProgress = ({ progress, points, level }) => {
+export const LevelProgress = ({ progress, level }) => {
     const { provider } = useProvider()
     const wallet = useSelector((state) => state.wallet)
     const [balance, setBalance] = useState()

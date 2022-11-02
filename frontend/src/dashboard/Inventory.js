@@ -48,7 +48,7 @@ export const Inventory = () => {
                                             image_class={`group-hover:grayscale-0 transition duration-300 ease-in-out object-contain`}
                                         />
                                     ))}
-                                {!wearables || wearables?.length == 0 && (
+                                {(!wearables || (wearables?.length === 0)) && (
                                     <div>Your inventory is empty</div>
                                 )}
                             </div>

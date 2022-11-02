@@ -15,12 +15,10 @@ export const Dashboard = () => {
     const { account } = useAccount()
     const disconnectWallet = useDisconnect()
     const dispatch = useDispatch()
-    useEffect(() => {
-        {
-            account.isConnected != undefined &&
-                !account.isConnected &&
-                navigate('/', { replace: true })
-        }
+    useEffect(() => { 
+        account.isConnected !== undefined &&
+            !account.isConnected &&
+            navigate('/', { replace: true })   
     }, [account])
     return (
         <div className="grid grid-row-8 grid-cols-3 gap-4 min-h-screen text-base bg-background text-white pr-9 pt-9 space-x-9">

@@ -20,6 +20,7 @@ export const Leaderboard = () => {
         )
     }
     getLeaderboards()
+
   }, [])
 
   const chargeModal = (number) => {

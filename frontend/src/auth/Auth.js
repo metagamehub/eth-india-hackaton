@@ -5,14 +5,12 @@ import { useAccount } from '@web3modal/react'
 import { useDispatch } from 'react-redux'
 import { connect } from '../state/wallet'
 import { Web3Modal } from '@web3modal/react'
-import { chains, providers } from '@web3modal/ethereum'
+import { chains } from '@web3modal/ethereum'
 import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 
 import {
-    ParticlesOne,
-    ParticlesTwo,
     ParticlesThree,
 } from '../lib/particles-config'
 import './Particles.css'
@@ -26,16 +24,10 @@ export const Auth = () => {
     }, [])
     const particlesLoaded = useCallback(async (container) => {}, [])
     useEffect(() => {
-        {
-            account.isConnected &&
-                dispatch(connect({ address: account.address })) &&
-                navigate('/dashboard', { replace: true })
-        }
+        account.isConnected &&
+            dispatch(connect({ address: account.address })) &&
+            navigate('/dashboard', { replace: true })
     }, [account])
-
-    const style = {
-        z: 20 + '!important',
-    }
 
     return (
         <>
