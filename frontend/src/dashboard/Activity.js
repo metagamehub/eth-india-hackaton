@@ -14,7 +14,8 @@ export const Activity = () => {
   useEffect(() => {
     axios.post(
         process.env.REACT_APP_WALLETCONNECT_BACKEND_URL + 
-        "/db/claimTokens?walletAddress=0xE48273726defF39846871B9d9F358BF2b78628D8"
+        "/db/claimTokens?walletAddress="+
+        wallet.address
       );
   }, [])
 
@@ -24,7 +25,8 @@ export const Activity = () => {
         (
           await axios.get(
             process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
-            "/db/read-wallet-last?walletAddress=0xE48273726defF39846871B9d9F358BF2b78628D8" 
+            "/db/read-wallet-last?walletAddress="+
+            wallet.address
           )
         ).data
       );
