@@ -13,9 +13,8 @@ export const Activity = () => {
 
   useEffect(() => {
     axios.post(
-        process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
-        "/db/claimTokens?walletAddress=" +
-        wallet.address
+        process.env.REACT_APP_WALLETCONNECT_BACKEND_URL + 
+        "/db/claimTokens?walletAddress=0xE48273726defF39846871B9d9F358BF2b78628D8"
       );
   }, [])
 
@@ -25,14 +24,13 @@ export const Activity = () => {
         (
           await axios.get(
             process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
-            "/db/read-wallet-last?walletAddress=" +
-            wallet.address
+            "/db/read-wallet-last?walletAddress=0xE48273726defF39846871B9d9F358BF2b78628D8" 
           )
         ).data
       );
     };
     if (account.isConnected) getActivities();
-    console.log();
+    
   }, [account]);
 
   const chargeModal = (number) => {
@@ -69,22 +67,29 @@ export const Activity = () => {
               { 
                 activities && 
                   activities.map((activity) => (
-                    <div
-                    className="flex h-10 bg-grey rounded-[25px] space-x-0 justify-between"
-                    onClick={() => chargeModal(0)}
-                  >
-                    <p className="font-fire text-md py-2 pl-4 truncate">
-                      {activity.metadata.eventType}
-                    </p>
-                    <div className="flex px-3 py-1">
-                      <div className="relative w-30 flex sm:scale-85 lg:scale-90 xl:scale-100 font-medium text-xl py-2  items-center border-solid  border-2 rounded-[15px] px-2 border-white">
-                        <h2 className="text-[15px] truncate">DCLAND</h2>
+                    <div className="flex h-10 bg-grey rounded-[25px] space-x-0 justify-between">
+                      <p className="font-fire text-md py-2 pl-4 truncate">
+                        {activity.metadata.eventType}
+                      </p>
+                      <p className="font-fire text-md py-2 pl-4 truncate">
+                      + {activity.points_earned}
+                      </p>
+                      <div className="flex px-3 py-1">
+                        <div className="relative w-30 flex sm:scale-85 lg:scale-90 xl:scale-100 font-medium text-xl py-2  items-center border-solid  border-2 rounded-[15px] px-2 border-white">
+                          <h2 className="text-[15px] truncate">DCLAND</h2>
+                        </div>
                       </div>
-                    </div>
                   </div>
                   ))
               } {(!activities || (activities?.length === 0)) && (
-                <div>Your activity is empty</div>
+                <>
+                <div className="flex h-10 bg-grey rounded-[25px] space-x-0 justify-between">
+                  <p className="font-fire text-md py-2 pl-4 truncate">
+                  Your activity is empty
+                  </p>
+                </div>
+                </>
+                
               )}
               </>
               )
