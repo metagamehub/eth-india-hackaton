@@ -9,7 +9,11 @@ const PORT = process.env.PORT || "3001";
 
 const app = express();
 
-var whitelist = ["https://eth-lisbon-hackaton.vercel.app/","https://eth-lisbon-hackaton.vercel.app", "http://localhost:3000"];
+var whitelist = [
+	"https://eth-lisbon-hackaton.vercel.app/",
+	"https://eth-lisbon-hackaton.vercel.app",
+	"http://localhost:3000",
+];
 
 function isOriginAllowed(origin) {
 	console.log("Origin Allowed: ", origin, whitelist.indexOf(origin) !== -1);
@@ -64,7 +68,7 @@ async function connectToDatabase() {
 }
 
 async function loadProposalsandVotes() {
-	await decentralandDAO.getProposals();
+	await decentralandDAO.getProposalsInit();
 	schedule.scheduleJob("0 0 * * *", "America/Bogota", async () => {
 		await decentralandDAO.getProposals();
 		schedule.scheduleJob("*/15 0-23 * * *", "America/Bogota", async () => {

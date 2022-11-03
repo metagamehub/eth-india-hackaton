@@ -185,7 +185,7 @@ module.exports = {
 					points_earned: points_earned,
 					metadata: {
 						walletAddress: walletAddress,
-						eventType: eventType,
+						eventType: "Purchased a wearable",
 					},
 				};
 				const itemRequest = Events.checkPostParams(body);

@@ -2,7 +2,25 @@ require("dotenv").config();
 const creatorABI = require("./contracts-abi/creator").abi;
 const databaseController = require("../controller/controller");
 const Web3 = require("web3");
-const web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.RPC_NODE_ADDRESS));
+const Web3WsProvider = require("web3-providers-ws");
+
+const options = {
+	clientConfig: {
+		maxReceivedFrameSize: 100000000, //3555167
+		maxReceivedMessageSize: 100000000,
+	},
+	reconnect: {
+		auto: true,
+		delay: 5000, // ms
+		maxAttempts: 5,
+		onTimeout: false,
+	},
+};
+
+const ws = new Web3WsProvider(process.env.RPC_NODE_ADDRESS, options);
+
+const web3 = new Web3(ws);
+
 const contracts = JSON.parse(process.env.CONTRACTS_OBJECT);
 
 async function subscribeToEvents(contractAddress, topics, startingBlock, tag) {
