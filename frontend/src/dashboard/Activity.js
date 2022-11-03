@@ -74,7 +74,7 @@ export const Activity = () => {
                     onClick={() => chargeModal(0)}
                   >
                     <p className="font-fire text-md py-2 pl-4 truncate">
-                      {activity.event_id}
+                      {activity.metadata.eventType}
                     </p>
                     <div className="flex px-3 py-1">
                       <div className="relative w-30 flex sm:scale-85 lg:scale-90 xl:scale-100 font-medium text-xl py-2  items-center border-solid  border-2 rounded-[15px] px-2 border-white">

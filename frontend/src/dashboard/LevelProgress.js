@@ -16,7 +16,7 @@ export const LevelProgress = ({ progress, level }) => {
 
     const Childdiv = {
         height: '100%',
-        width: `${progress}%`,
+        width: `${balance}%`,
         borderRadius: 5,
         textAlign: 'right',
     }
