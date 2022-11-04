@@ -41,7 +41,7 @@ module.exports = {
 			const item = await Events.findAll({
 				where: { "metadata.walletAddress": walletAddress },
 				limit: 5,
-                order: [['id', 'DESC']]
+				order: [["id", "DESC"]],
 			});
 			if (!item) return res.status(400).json({ msg: "item not found" });
 			return res.status(200).json(item);
@@ -173,7 +173,6 @@ module.exports = {
 				const { walletAddress, eventType, event_id } = element;
 				let points_earned;
 				if (await Events.findOne({ where: { event_id: event_id } })) {
-					// console.log(">> event with id:", event_id, "has already been inserted");
 					return "already inserted";
 				}
 				if (eventType == "purchase") {
@@ -204,7 +203,6 @@ module.exports = {
 		try {
 			const { metadata, points_earned, event_id } = request;
 			if (await Events.findOne({ where: { event_id: event_id } })) {
-				// console.log(">> event with id:", event_id, "has already been inserted");
 				return "already inserted";
 			}
 			let body = {

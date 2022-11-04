@@ -71,7 +71,7 @@ async function loadProposalsandVotes() {
 	await decentralandDAO.getProposalsInit();
 	schedule.scheduleJob("0 0 * * *", "America/Bogota", async () => {
 		await decentralandDAO.getProposals();
-		schedule.scheduleJob("*/15 0-23 * * *", "America/Bogota", async () => {
+		schedule.scheduleJob("*/5 0-23 * * *", "America/Bogota", async () => {
 			await decentralandDAO.getProposals();
 		});
 	});
