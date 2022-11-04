@@ -13,6 +13,7 @@ var whitelist = [
 	"https://eth-lisbon-hackaton.vercel.app/",
 	"https://eth-lisbon-hackaton.vercel.app",
 	"http://localhost:3000",
+	"http://localhost:3001",
 ];
 
 function isOriginAllowed(origin) {
@@ -68,7 +69,7 @@ async function connectToDatabase() {
 }
 
 async function loadProposalsandVotes() {
-	await decentralandDAO.getProposalsInit();
+	//await decentralandDAO.getProposalsInit();
 	schedule.scheduleJob("0 0 * * *", "America/Bogota", async () => {
 		await decentralandDAO.getProposals();
 		schedule.scheduleJob("*/5 0-23 * * *", "America/Bogota", async () => {

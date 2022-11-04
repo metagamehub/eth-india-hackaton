@@ -42,7 +42,7 @@ export const LevelProgress = ({ progress, level }) => {
                 </div>
             )}
             <div style={Parentdiv}>
-                <div style={Childdiv} className="progressbar">
+                <div style={Childdiv} className="gradientbox1">
                     <span style={progresstext}></span>
                 </div>
             </div>

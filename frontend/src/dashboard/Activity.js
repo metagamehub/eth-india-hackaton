@@ -32,12 +32,14 @@ export const Activity = () => {
       );
     };
     if (account.isConnected) getActivities();
+    for (const iterator in activities) {
+      setActivity(activities[iterator]);
+    }
     
   }, [account]);
 
   const chargeModal = (number) => {
     setOpenModal(true);
-    setActivity(activities[number]);
   };
 
   return (
@@ -69,29 +71,30 @@ export const Activity = () => {
               { 
                 activities && 
                   activities.map((activity) => (
-                    <div className="flex h-10 bg-grey rounded-[25px] space-x-0 justify-between">
-                      <p className="font-fire text-md py-2 pl-4 truncate">
-                        {activity.metadata.eventType}
+                    <div className="flex h-10 bg-grey rounded-[15px] space-x-0 justify-between">
+                      <div className="gradientbox2 font-fire text-md py-2 px-2 mx-[3px] my-[3px] text-center sm:scale-85 lg:scale-90 xl:scale-100 rounded-[15px]">
+                        <h2 className="text-[15px]">
+                          +{activity.points_earned}
+                        </h2>
+                      </div>
+                      <p className="font-fire text-md py-2 truncate">
+                      {activity.metadata.eventType}
                       </p>
-                      <p className="font-fire text-md py-2 pl-4 truncate">
-                      + {activity.points_earned}
-                      </p>
-                      <div className="flex px-3 py-1">
-                        <div className="relative w-30 flex sm:scale-85 lg:scale-90 xl:scale-100 font-medium text-xl py-2  items-center border-solid  border-2 rounded-[15px] px-2 border-white">
-                          <h2 className="text-[15px] truncate">DCLAND</h2>
+                      <div className="flex px-3 py-2">
+                        <div className="relative w-30 flex sm:scale-85 lg:scale-90 xl:scale-100 font-medium items-center border-solid  border-2 rounded-[10px] px-3 border-white">
+                          <h2 className="text-[11px] truncate">DCLAND</h2>
                         </div>
                       </div>
-                  </div>
+                    </div>
                   ))
               } {(!activities || (activities?.length === 0)) && (
                 <>
-                <div className="flex h-10 bg-grey rounded-[25px] space-x-0 justify-between">
+                <div className="flex h-10 bg-grey rounded-[15px] space-x-0 justify-between">
                   <p className="font-fire text-md py-2 pl-4 truncate">
                   Your activity is empty
                   </p>
                 </div>
                 </>
-                
               )}
               </>
               )

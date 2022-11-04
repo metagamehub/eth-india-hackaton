@@ -37,8 +37,11 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
-.progressbar {
+.gradientbox1 {
     background: linear-gradient(116.57deg, #0A59AA 33.33%, #A278F8 89.94%)
+}
+.gradientbox2 {
+    background: linear-gradient(123.27deg, #A278F8 23.13%, #0A59AA 72.67%)
 }
 
 .modal{
