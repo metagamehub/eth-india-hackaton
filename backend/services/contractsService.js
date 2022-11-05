@@ -25,7 +25,7 @@ const mintTokens = async (address, token_amount) => {
     try {
         console.log(address)
         await mlp_contract.addPoints(address, token_amount, '0x', {
-            gasPrice: 50000000000,
+            gasPrice: signer.getGasPrice(),
         })
     } catch (err) {
         console.log(err)
@@ -34,8 +34,9 @@ const mintTokens = async (address, token_amount) => {
 
 const mintBadges = async (address, id) => {
     try {
-        await badges_contract.mintBadge(address, id,
-            { gasPrice: 70000000000 })
+        await badges_contract.mintBadge(address, id, {
+            gasPrice: signer.getGasPrice(),
+        })
     } catch (err) {
         console.log(err)
     }
