@@ -29,10 +29,10 @@ async function getWearables(req, res) {
             }).catch(err => {
                 return res.status(400).send({ err: "Warables couldn't be found, an error ocurred with the Decentraland's API" });
             });
-        }
-        return res.status(400).send({ err: "your address is not an ethereum wallet" });
-    }
-    return res.status(400).send({ err: "parameter 'address' is required" });
+        } else
+            return res.status(400).send({ err: "your address is not an ethereum wallet" });
+    } else
+        return res.status(400).send({ err: "parameter 'address' is required" });
 }
 
 async function findWearablesList(address, attemps) {
