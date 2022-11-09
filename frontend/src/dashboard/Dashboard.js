@@ -1,28 +1,17 @@
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useAccount } from '@web3modal/react'
+import React from 'react'
 import { Activity } from '../dashboard/Activity'
 import { Inventory } from '../dashboard/Inventory'
 import { Badges } from './Badges'
 import { Leaderboard } from './Leaderboard'
 import { LevelProgress } from './LevelProgress'
-import { useDisconnect } from '@web3modal/react'
-import { useDispatch } from 'react-redux'
-import { disconnect } from '../state/wallet'
+import WalletButton from '../components/WalletButton'
 
 export const Dashboard = () => {
-    const navigate = useNavigate()
-    const { account } = useAccount()
-    const disconnectWallet = useDisconnect()
-    const dispatch = useDispatch()
-    useEffect(() => { 
-        account.isConnected !== undefined &&
-            !account.isConnected &&
-            navigate('/', { replace: true })   
-    }, [account])
+    
+    
     return (
-        <div className="grid grid-row-8 grid-cols-3 gap-4 min-h-screen text-base bg-background text-white pr-9 pt-9 space-x-9">
-            <div className='row-span-1 space-x-9'>
+        <div className="grid grid-row-8  grid-cols-3 gap-4 min-h-screen text-base bg-background text-white pr-9 pt-9 space-x-9">
+            <div className='row-span-2 space-x-9'>
                 <h1>METAVERSE</h1>
                 <h2>LOYALTY MODULE</h2>
             </div>
@@ -33,7 +22,10 @@ export const Dashboard = () => {
                 height="100%"
             ></iframe>
 
-            <div className="row-span-3">
+            <div className="col-start-3 row-span-1">
+                <WalletButton/>
+            </div> 
+            <div className="row-span-3 ">
                 <Inventory />
             </div>
             <div className="row-span-4">
@@ -42,20 +34,11 @@ export const Dashboard = () => {
             <div className="row-span-3">
                 <Activity />
             </div>
-            <div className="row-span-4">
+            <div className="row-span-4 col-start-1">
                 <Leaderboard />
             </div>
-            <div className="flex regularButton col-start-3 row-span-3 text-center relative">
-                <button
-                    onClick={() => {
-                        dispatch(disconnect())
-                        disconnectWallet()
-                        
-                    }}
-                >
-                    Disconnect Wallet
-                </button>
-            </div> 
+            
+            
             <div className="col-start-2">
                 <LevelProgress progress="60" points={418} level={8} />
             </div>

@@ -22,8 +22,8 @@ export const Inventory = () => {
         if (account.isConnected) getWearables()
     }, [account])
     return (
-        <div className="relative flex flex-col space-y-3 w-90">
-            <div className="flex flex-col bg-[#262626] rounded-[25px] p-3 justify-between">
+        <div className="relative flex flex-col space-y-3">
+            <div className="flex flex-col bg-[#262626] rounded-[25px] p-3 justify-between max-w-full h-52">
                 <h2 className="text-8xl">Inventory</h2>
                 {
                     !wearables

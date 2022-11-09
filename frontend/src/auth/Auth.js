@@ -42,7 +42,7 @@ export const Auth = () => {
                 <div className="text-center">
                     <h1>METAVERSE</h1>
                     <h2 className="pb-20">LOYALTY MODULE</h2>
-                    <p className="font-body text-white w-96 min-h-full pb-14 ">
+                    <p className="font-body text-white w-[30rem] min-h-full pb-14 ">
                         Social engagement module to incentivize users to participate
                         in the Decentraland ecosystem through different onchain and
                         offchain activities.
