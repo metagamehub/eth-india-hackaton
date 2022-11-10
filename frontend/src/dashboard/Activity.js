@@ -20,6 +20,7 @@ export const Activity = () => {
   }, [])
 
   useEffect(() => {
+    // console.log(">> yooo")
     const getActivities = async () => {
       setActivities(
         (
@@ -31,12 +32,12 @@ export const Activity = () => {
         ).data
       );
     };
-    if (account.isConnected) getActivities();
+    getActivities();
     for (const iterator in activities) {
       setActivity(activities[iterator]);
     }
     
-  }, [account]);
+  }, []);
 
   const chargeModal = (number) => {
     setOpenModal(true);

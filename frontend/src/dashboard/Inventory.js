@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Wearable } from '../components/wearable'
+import { useSelector } from "react-redux";
 import axios from 'axios'
 import { useAccount } from '@web3modal/react'
 
 export const Inventory = () => {
+    const wallet = useSelector((state) => state.wallet);
     const [wearables, setWearables] = useState()
     const { account } = useAccount()
     useEffect(() => {
@@ -14,13 +16,13 @@ export const Inventory = () => {
                     await axios.get(
                         process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
                         '/wearables?address=' +
-                        account.address
+                        wallet.address
                     )
                 ).data.wearables
             )
         }
-        if (account.isConnected) getWearables()
-    }, [account])
+        getWearables()
+    }, [])
     return (
         <div className="relative flex flex-col space-y-3">
             <div className="flex flex-col bg-[#262626] rounded-[25px] p-3 justify-between max-w-full h-52">

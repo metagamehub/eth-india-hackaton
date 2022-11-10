@@ -7,6 +7,7 @@ async function getProposalsInit() {
 	axios({
 		url: "https://hub.snapshot.org/graphql",
 		method: "get",
+		keepAlive: true,
 		data: {
 			query: `
                 query Proposals {
@@ -26,16 +27,22 @@ async function getProposalsInit() {
                 }
             `,
 		},
-	}).then(async (result) => {
-		proposals = result.data.data.proposals;
-		await getVoters();
-	});
+	})
+		.then(async (result) => {
+			proposals = result.data.data.proposals;
+			await getVoters();
+		})
+		.catch((error) => {
+			console.log(">> axios error:", error.code);
+			console.log(error.message);
+		});
 }
 
 async function getProposals() {
 	axios({
 		url: "https://hub.snapshot.org/graphql",
 		method: "get",
+		keepAlive: true,
 		data: {
 			query: `
                 query Proposals {
@@ -56,10 +63,15 @@ async function getProposals() {
                 }
             `,
 		},
-	}).then(async (result) => {
-		proposals = result.data.data.proposals;
-		await getVoters();
-	});
+	})
+		.then(async (result) => {
+			proposals = result.data.data.proposals;
+			await getVoters();
+		})
+		.catch((error) => {
+			console.log(">> axios error:", error.code);
+			console.log(error.message);
+		});
 }
 
 async function getVoters() {
@@ -76,6 +88,7 @@ async function getVoters() {
 		axios({
 			url: "https://hub.snapshot.org/graphql",
 			method: "get",
+			keepAlive: true,
 			data: {
 				query: `
                     query Votes {
@@ -85,19 +98,24 @@ async function getVoters() {
                         }
                     `,
 			},
-		}).then(async (result) => {
-			for (element of result.data.data.votes) {
-				let body = {
-					event_id: "vote" + "-" + proposal.id + "-" + element.voter,
-					points_earned: "20",
-					metadata: {
-						walletAddress: element.voter,
-						eventType: "Voted for a proposal",
-					},
-				};
-				await databaseController.createSelfFromDAO(body);
-			}
-		});
+		})
+			.then(async (result) => {
+				for (element of result.data.data.votes) {
+					let body = {
+						event_id: "vote" + "-" + proposal.id + "-" + element.voter,
+						points_earned: "20",
+						metadata: {
+							walletAddress: element.voter,
+							eventType: "Voted for a proposal",
+						},
+					};
+					await databaseController.createSelfFromDAO(body);
+				}
+			})
+			.catch((error) => {
+				console.log(">> axios error:", error.code);
+				console.log(error.message);
+			});
 	}
 }
 
