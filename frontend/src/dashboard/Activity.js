@@ -37,7 +37,7 @@ export const Activity = () => {
       setActivity(activities[iterator]);
     }
     
-  }, []);
+  }, [(account.isConnected)]);
 
   const chargeModal = (number) => {
     setOpenModal(true);
