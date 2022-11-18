@@ -235,6 +235,7 @@ module.exports = {
 			return error.message;
 		}
 	},
+
 	claimTokens: async function (req, res) {
 		try {
 			const { walletAddress } = req.query;
@@ -252,14 +253,16 @@ module.exports = {
 				await Events.update({ reclaimed: true }, { where: { event_id: item.event_id } });
 			}
 			console.log(total_points, "POINTS");
-			if (total_points > 0) mintTokens(walletAddress, total_points);
-			else return res.status(400).json({ msg: "You don't have any tokens to claim" });
+			if (total_points > 0) await mintTokens(walletAddress, total_points);
+			else return res.status(202).json({ msg: "You don't have any tokens to claim" });
+			// return level
 			return res.status(200).json(total_points);
 		} catch (error) {
 			console.error(error);
 			return res.status(400).json({ msg: error.message });
 		}
 	},
+	
 	claimBadges: async function (req, res) {
 		try {
 			const eventTypes = ["Created a proposal", "Purchased a wearable", "Voted for a proposal"];
