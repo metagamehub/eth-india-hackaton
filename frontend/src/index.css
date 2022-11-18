@@ -17,6 +17,7 @@ h1 {
 }
 
 h2 {
+    white-space: nowrap;
     @apply font-title text-3xl;
 }
 

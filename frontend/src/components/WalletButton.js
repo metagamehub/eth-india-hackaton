@@ -2,7 +2,6 @@ import {React, useState} from 'react'
 import { WalletModal } from '../modals/WalletModal'
 import { useAccount } from '@web3modal/react'
 
-
 const WalletButton = () => {
 
     const { account } = useAccount()
@@ -17,6 +16,7 @@ const WalletButton = () => {
                     <p className='px-6 truncate'>{account?.address}</p>
                 </button>
             </div> 
+            
         </>
     )
 }

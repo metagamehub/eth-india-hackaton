@@ -33,19 +33,18 @@ export const Leaderboard = () => {
     {openModal && <StatsModal onDismiss={() => setOpenModal(false)} leaderboard={leaderboard}/>}
     <div className="flex flex-col text-white max-w-full space-y-3">
       <h2 className="text-xl">LEADERBOARD</h2>
-      {leaderboards && 
-        (<><div className="flex h-10 bg-grey rounded-2xl py-2 px-4 space-x-4 justify-between">
-            <p className='truncate'>1. {leaderboards[0]["?column?"]}</p>
+          <div className="flex h-10 bg-grey rounded-2xl py-2 px-4 space-x-4 justify-between">
+          {leaderboards &&  (<p className='truncate'>1. {leaderboards[0]["?column?"]}</p>)}
             <button className='hover:border-tahiti hover:text-tahiti' onClick={() => chargeModal(0)}>{'>'}</button>
-          </div><div className="flex h-10 bg-grey rounded-2xl py-2 px-4 justify-between">
-              <p className='truncate'>2. {leaderboards[1]["?column?"]}</p>
-              <button className='hover:border-tahiti hover:text-tahiti' onClick={() => chargeModal(1)}>{'>'}</button>
-            </div><div className="flex h-10 bg-grey rounded-2xl py-2 px-4 justify-between">
-              <p className='truncate'>3. {leaderboards[2]["?column?"]}</p>
-              <button className='hover:border-tahiti hover:text-tahiti' onClick={() => chargeModal(2)}>{'>'}</button>
-            </div></>
-          )
-        }
+          </div>
+          <div className="flex h-10 bg-grey rounded-2xl py-2 px-4 justify-between">
+            {leaderboards &&  (<p className='truncate'>2. {leaderboards[1]["?column?"]}</p>)}
+            <button className='hover:border-tahiti hover:text-tahiti' onClick={() => chargeModal(1)}>{'>'}</button>
+          </div>
+          <div className="flex h-10 bg-grey rounded-2xl py-2 px-4 justify-between">
+            {leaderboards &&  (<p className='truncate'>3. {leaderboards[2]["?column?"]}</p>)}
+            <button className='hover:border-tahiti hover:text-tahiti' onClick={() => chargeModal(2)}>{'>'}</button>
+          </div>
     </div>
     </>
   )
