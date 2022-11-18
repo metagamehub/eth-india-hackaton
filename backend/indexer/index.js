@@ -56,7 +56,8 @@ async function subscribeToEvents(contractAddress, topics, startingBlock, tag) {
 				console.log(element.rewardData);
 				if (Array.isArray(element.rewardData))
 					await databaseController.createSelfFromIndexer(element.rewardData);
-				else await databaseController.createSelfFromIndexer([element.rewardData]);
+				else 
+					await databaseController.createSelfFromIndexer([element.rewardData]);
 			}
 		});
 }
@@ -71,7 +72,7 @@ function parseMarketplaceTxData(data, hash, lIndex) {
 	for (let index = 0; index < dataElement[3].length; index++) {
 		rewards.push({
 			walletAddress: dataElement[3][index],
-			reward: dataElement[2][index] ? dataElement[2][index] : 0,
+			reward: dataElement[2][index],
 			eventType: "purchase",
 			event_id: "purchase-" + hash + "-" + lIndex + "-" + index,
 		});
@@ -109,9 +110,7 @@ async function obtainPayloadFromLogData(address, topics, log) {
 			rewardStructure.push(parseMarketplaceTxData(payload.data, log.transactionHash, log.logIndex));
 			break;
 		case contracts["factory"].contractAddress:
-			rewardStructure.push(
-				await parseFactoryTxData(log.topics[1], log.transactionHash, log.logIndex)
-			);
+			rewardStructure.push(await parseFactoryTxData(log.topics[1], log.transactionHash, log.logIndex));
 			break;
 		default:
 			break;
@@ -125,10 +124,11 @@ async function obtainPayloadFromLogData(address, topics, log) {
 }
 
 async function run() {
+	const startingBlock = await web3.eth.getBlockNumber() - process.env.BLOCKS_BEFORE;
 	for (const key in contracts) {
 		if (Object.hasOwnProperty.call(contracts, key)) {
 			const element = contracts[key];
-			const { contractAddress, topics, startingBlock, tag } = element;
+			const { contractAddress, topics, tag } = element;
 			await subscribeToEvents(contractAddress, topics, startingBlock, tag);
 		}
 	}
