@@ -38,6 +38,7 @@ module.exports = {
 	readLastWalletEvents: async function (req, res) {
 		try {
 			const { walletAddress } = req.query;
+			if (!walletAddress) return res.status(400).json({ msg: "invalid parameters" });
 			const item = await Events.findAll({
 				where: { "metadata.walletAddress": walletAddress },
 				limit: 5,
@@ -54,6 +55,7 @@ module.exports = {
 	readAllWalletEvents: async function (req, res) {
 		try {
 			const { walletAddress } = req.query;
+			if (!walletAddress) return res.status(400).json({ msg: "invalid parameters" });
 			const item = await Events.findAll({
 				where: { "metadata.walletAddress": walletAddress },
 			});
@@ -68,11 +70,12 @@ module.exports = {
 	readPurchases: async function (req, res) {
 		try {
 			const { walletAddress } = req.query;
+			if (!walletAddress) return res.status(400).json({ msg: "invalid parameters" });
 			const item = await Events.findAll({
 				where: {
 					[Op.and]: [
 						{ "metadata.walletAddress": walletAddress },
-						{ "metadata.eventType": "purchase" },
+						{ "metadata.eventType": "Purchased a wearable" },
 					],
 				},
 			});
@@ -87,9 +90,13 @@ module.exports = {
 	readVotes: async function (req, res) {
 		try {
 			const { walletAddress } = req.query;
+			if (!walletAddress) return res.status(400).json({ msg: "invalid parameters" });
 			const item = await Events.findAll({
 				where: {
-					[Op.and]: [{ "metadata.walletAddress": walletAddress }, { "metadata.eventType": "vote" }],
+					[Op.and]: [
+						{ "metadata.walletAddress": walletAddress },
+						{ "metadata.eventType": "Voted for a proposal" },
+					],
 				},
 			});
 			if (!item) return res.status(400).json({ msg: "item not found" });
@@ -103,11 +110,12 @@ module.exports = {
 	readProposal: async function (req, res) {
 		try {
 			const { walletAddress } = req.query;
+			if (!walletAddress) return res.status(400).json({ msg: "invalid parameters" });
 			const item = await Events.findAll({
 				where: {
 					[Op.and]: [
 						{ "metadata.walletAddress": walletAddress },
-						{ "metadata.eventType": "proposal" },
+						{ "metadata.eventType": "Created a proposal" },
 					],
 				},
 			});
@@ -171,6 +179,7 @@ module.exports = {
 		try {
 			for (element of request) {
 				const { walletAddress, eventType, event_id } = element;
+				if (!(walletAddress || eventType || event_id)) return "no complete parameters";
 				let points_earned;
 				if (await Events.findOne({ where: { event_id: event_id } })) {
 					return "already inserted";
@@ -187,6 +196,10 @@ module.exports = {
 						eventType: "Purchased a wearable",
 					},
 				};
+				if (eventType == "deployedCollection") {
+					body.points_earned = "0";
+					body.metadata.eventType = "deployedCollection";
+				}
 				const itemRequest = Events.checkPostParams(body);
 				if (!itemRequest) return "incomplete parameters";
 				const item = Events.build(itemRequest);
@@ -202,6 +215,7 @@ module.exports = {
 	createSelfFromDAO: async function (request) {
 		try {
 			const { metadata, points_earned, event_id } = request;
+			if (!event_id) return "no complete parameters";
 			if (await Events.findOne({ where: { event_id: event_id } })) {
 				return "already inserted";
 			}
@@ -224,6 +238,7 @@ module.exports = {
 	claimTokens: async function (req, res) {
 		try {
 			const { walletAddress } = req.query;
+			if (!walletAddress) return res.status(400).json({ msg: "invalid parameters" });
 			const items = await Events.findAll({
 				where: {
 					"metadata.walletAddress": walletAddress,
@@ -247,8 +262,9 @@ module.exports = {
 	},
 	claimBadges: async function (req, res) {
 		try {
-			const eventTypes = ["proposal", "purchase", "vote"];
+			const eventTypes = ["Created a proposal", "Purchased a wearable", "Voted for a proposal"];
 			const { walletAddress } = req.query;
+			if (!walletAddress) return res.status(400).json({ msg: "invalid parameters" });
 			const balances = await balanceOfBatch(walletAddress);
 			let index = 0;
 			for (let eventType of eventTypes) {

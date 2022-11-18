@@ -40,7 +40,7 @@ export const Dashboard = () => {
             
             
             <div className="col-start-2">
-                <LevelProgress progress="60" points={418} level={8} />
+                <LevelProgress progress="60" points={418} level={0} />
             </div>
 
         </div>

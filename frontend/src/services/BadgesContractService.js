@@ -22,6 +22,6 @@ export const getBalance = async (walletAddress, provider) => {
         ],
         [1, 2, 3, 4, 5]
     )
-    console.log(balance)
+    console.log(">> balance:",balance)
     return balance
 }
