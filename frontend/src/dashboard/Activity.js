@@ -4,8 +4,10 @@ import axios from "axios";
 import { useAccount } from "@web3modal/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/grid";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import "swiper/css/navigation";
+import { Grid, Navigation, Pagination } from "swiper";
 
 export const Activity = () => {
   
@@ -45,7 +47,7 @@ export const Activity = () => {
           activity={activity}
         />
       )}
-      <div className="flex flex-col space-y-3 max-w-full h-48 text-white">
+      <div className="flex flex-col space-y-3 max-w-full max-h-full text-white">
         <h2 className="text-xl truncate ">ACTIVITY</h2>
         {
           !activities
@@ -63,26 +65,28 @@ export const Activity = () => {
                 )
               ) : (
               <>
-                {activities && 
+                <Swiper
+                  slidesPerView={1}
+                  grid={{
+                    rows: 3,
+                    fill: "row",
+                  }}
+                  spaceBetween={12}
+                  navigation={true}
+                  modules={[Navigation, Grid, Pagination]}
+                  className="mySwiper"
+                >  
+                {activities &&                
                   activities.map((activity) => (
-                    <Swiper
-                        slidesPerView={2}
-                        spaceBetween={1}
-                        pagination={{
-                        clickable: true,
-                      }}
-                      modules={[Pagination]}
-                      className="mySwiper"
-                    >
                     <SwiperSlide>
-                      <div className="flex h-8 bg-grey rounded-[15px] space-x-0 justify-between">
-                        <div className="gradientbox2 font-fire text-md py-1 px-2 mx-[3px] my-[3px] text-center sm:scale-85 lg:scale-90 xl:scale-100 rounded-[15px]">
+                      <div className="flex h-10 w-[80%] bg-grey rounded-[15px] space-x-0 justify-between">
+                        <div className="gradientbox2 font-fire py-1 px-2 m-1 text-md text-center sm:scale-85 lg:scale-90 xl:scale-100 rounded-[12px]">
                           <h2 className="text-[15px]">
                             +{activity.points_earned}
                           </h2>
                         </div>
                         <p className="font-fire text-md py-2 truncate">
-                        {activity.metadata.eventType}
+                          {activity.metadata.eventType}
                         </p>
                         <div className="flex px-3 py-2">
                           <div className="relative w-30 flex sm:scale-85 lg:scale-90 xl:scale-100 font-medium items-center border-solid  border-2 rounded-[10px] px-3 border-white">
@@ -91,9 +95,9 @@ export const Activity = () => {
                         </div>
                       </div>
                       </SwiperSlide>
-                    </Swiper>
                   ))
-              }
+                }
+                </Swiper>
               {(!activities || (activities?.length === 0)) && (
                 <>
                 <div className="flex h-10 bg-grey rounded-[15px] space-x-0 justify-between">

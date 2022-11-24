@@ -121,7 +121,7 @@ export const Badges = () => {
                     </div>
                 </div>
             ) : (
-                <div className="bg-grey text-white max-w-full h-72 rounded-2xl space-y-3">
+                <div className="bg-grey text-white max-w-full max-h-max rounded-2xl space-y-3">
                     <div className="pb-11 pt-6">
                         <h2 className="text-2xl pl-4">Badges</h2>
                         <button
@@ -130,7 +130,7 @@ export const Badges = () => {
                         >
                             Claim all
                         </button>
-                        <div className="flex flex-row flex-wrap justify-center">
+                        <div className="flex flex-row flex-wrap justify-around py-4">
                             {badges.badges.map((badge, index) => {
                                 const { userBadges } = badges
                                 if (userBadges && userBadges[index] >= 1)

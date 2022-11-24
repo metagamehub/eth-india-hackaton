@@ -46,6 +46,9 @@ export const LevelProgress = ({ progress, level }) => {
 		};
 		provider && claimTokens() && getBalance();
 	}, [provider]);
+
+
+
 	return (
 		<div className="flex flex-col">
 			{balance && (

@@ -4,8 +4,10 @@ import axios from 'axios'
 import { useAccount } from '@web3modal/react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/grid";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import "swiper/css/navigation";
+import { Grid, Navigation, Pagination } from "swiper";
 
 export const Inventory = () => {
     
@@ -26,15 +28,14 @@ export const Inventory = () => {
             )
         }
         getWearables()
-        console.log("Wearables", wearables)
     }, [(account)])
 
     
     return (
         <div className="bg-grey text-white max-w-full max-h-full rounded-2xl space-y-3">
-            <div className="pb-11 pt-6">
+            <div className="p-8">
                 <h2 className="text-2xl pl-4">Inventory</h2>
-                    <div className="flex flex-col gap-8 justify-center pt-4 max-w-full items-center">
+                    <div className="flex flex-col gap-8 justify-center pt-4 max-w-full max-h-full items-center">
                 {
                     !wearables
                         ? (
@@ -52,15 +53,16 @@ export const Inventory = () => {
                             <>
                             <Swiper
                                 slidesPerView={2}
+                                grid={{
+                                    rows: 2,
+                                    fill: "row",
+                                  }}
                                 spaceBetween={1}
-                                pagination={{
-                                    clickable: true,
-                                }}
-                                modules={[Pagination]}
+                                navigation={true}
+                                modules={[Navigation, Grid, Pagination]}
                                 className="mySwiper"
                             >
                                 
-                                    <div className="grid grid-cols-2 place-content-center max-w-full items-center">
                                     {wearables &&
                                         wearables.map((wearable) => (
                                             <SwiperSlide>
@@ -73,7 +75,6 @@ export const Inventory = () => {
                                     {(!wearables || (wearables?.length === 0)) && (
                                         <div>Your inventory is empty</div>
                                     )}
-                                 </div>
                             </Swiper>
                             </>
                         )

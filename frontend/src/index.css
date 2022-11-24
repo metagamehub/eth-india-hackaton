@@ -66,14 +66,14 @@ p {
     display: grid;
     grid-gap: 30px;
     grid-template: 
-        [row1-start] "title avatar button" 11% [row1-end]
-        [row2-start] "title avatar inventory" 10% [row2-end]
+        [row1-start] "title avatar button" 15% [row1-end]
+        [row2-start] "title avatar inventory" 2% [row2-end]
         [row3-start] "badges avatar inventory" auto [row3-end]
         [row4-start] "leaderboard avatar activity" 10% [row4-end]
         [row5-start] "leaderboard level activity" 12% [row5-end]
         / 31% auto 31%;
         
-    @apply min-h-screen text-base bg-background text-white pr-9 pt-9 space-x-9;
+    @apply min-h-screen text-base bg-background text-white py-9 pr-9 space-x-9;
 }
 
 .item-a {
@@ -84,6 +84,7 @@ p {
 }
 .item-c {
     grid-area: button;
+    align-self: center;
 }
 .item-d {
     grid-area: badges;
@@ -98,6 +99,7 @@ p {
 }
 .item-g {
     grid-area: level;
+    align-self: center;
 }
 .item-h {
     grid-area: activity;
@@ -106,11 +108,14 @@ p {
 .swiper {
     width: 100%;
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .swiper-slide {
     text-align: center;
     font-size: 18px;
+
   
     /* Center slide text vertically */
     display: -webkit-box;
