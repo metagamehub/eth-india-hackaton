@@ -51,7 +51,7 @@ p {
 }
 
 .stats{
-    @apply bg-background h-11 border-2 rounded-xl mx-12 my-2.5 flex flex-nowrap inline-block;
+    @apply bg-background h-11 border-2 rounded-xl my-2.5 flex flex-nowrap inline-block;
 }
 
 .stats__text{
@@ -61,4 +61,69 @@ p {
 .stats__data{
     @apply absolute py-2 right-20;
 }
+
+.container-dashboard{
+    display: grid;
+    grid-gap: 30px;
+    grid-template: 
+        [row1-start] "title avatar button" 11% [row1-end]
+        [row2-start] "title avatar inventory" 10% [row2-end]
+        [row3-start] "badges avatar inventory" auto [row3-end]
+        [row4-start] "leaderboard avatar activity" 10% [row4-end]
+        [row5-start] "leaderboard level activity" 12% [row5-end]
+        / 31% auto 31%;
+        
+    @apply min-h-screen text-base bg-background text-white pr-9 pt-9 space-x-9;
+}
+
+.item-a {
+    grid-area: title;
+}
+.item-b {
+    grid-area: avatar;
+}
+.item-c {
+    grid-area: button;
+}
+.item-d {
+    grid-area: badges;
+    align-self: center;
+}
+.item-e {
+    grid-area: inventory;
+    align-self: center;
+}
+.item-f {
+    grid-area: leaderboard;
+}
+.item-g {
+    grid-area: level;
+}
+.item-h {
+    grid-area: activity;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
 

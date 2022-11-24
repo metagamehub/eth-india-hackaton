@@ -4,6 +4,7 @@ import axios from 'axios'
 import { getBalance as BadgesContractservice } from '../services/BadgesContractService'
 import { useProvider } from '@web3modal/react'
 import { useSelector } from 'react-redux'
+import toast, { Toaster } from 'react-hot-toast';
 
 const badgesOrder = {
     0: 'The DAOist',
@@ -14,10 +15,14 @@ const badgesOrder = {
 }
 
 export const Badges = () => {
-    const [badges, setBadges] = useState()
-    const { provider } = useProvider()
+    
     const wallet = useSelector((state) => state.wallet)
+    const [badges, setBadges] = useState("")
+    const { provider } = useProvider()
+    let image;
+    
     useEffect(() => {
+        console.log("Provider badges", provider)
         const getBadges = async () => {
             const badges = (
                     await axios.get(
@@ -26,7 +31,7 @@ export const Badges = () => {
                     )
                 ).data,
                 userBadges = await BadgesContractservice(
-                    wallet.address,
+                    localStorage.getItem('address'),
                     provider
                 )
             setBadges({
@@ -40,10 +45,50 @@ export const Badges = () => {
     useEffect(() => {
         console.log(badges)
     }, [badges])
+
+    const claimBadges = () =>{
+        axios.post(
+            process.env
+                .REACT_APP_WALLETCONNECT_BACKEND_URL +
+                '/db/claimBadges?walletAddress=' +
+                wallet.address
+        );
+        toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? 'animate-enter' : 'animate-leave'
+          } text-white max-w-md w-full bg-grey rounded-lg pointer-events-auto flex ring-1 ring-white`}
+        >
+          <div className="flex-1 w-0 px-2">
+            <div className="flex items-center">
+              <Badge src={image} ></Badge>
+              <div className="ml-3 flex-1">
+                <p className="text-sm font-medium">
+                  You claim all!
+                </p>
+                <p className="mt-1 text-sm">
+                    The Badges have been added to your wallet
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex border-l border-white">
+            <button
+              onClick={() => toast.dismiss(t.id)}
+              className="w-full rounded-none rounded-r-lg p-4 flex items-center justify-center text-sm font-medium focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      ))}
+      ;
+    
     return (
         <>
+        <Toaster position="bottom-center" reverseOrder={false}/>
             {!badges ? (
-                <div className="bg-grey text-white max-w-full h-72 rounded-2xl space-y-3">
+                <div className="bg-grey text-white max-w-full max-h-full rounded-2xl space-y-3">
                     <div className="pb-11 pt-6">
                         <h2 className="text-2xl pl-4">Badges</h2>
                         <div className="flex flex-col justify-center max-w-full items-center">
@@ -81,21 +126,13 @@ export const Badges = () => {
                         <h2 className="text-2xl pl-4">Badges</h2>
                         <button
                             className="ml-4 z-10 border-solid border-2 w-24 h-7 text-[17px] rounded-xl border-white hover:border-tahiti hover:text-tahiti"
-                            onClick={() =>
-                                axios.post(
-                                    process.env
-                                        .REACT_APP_WALLETCONNECT_BACKEND_URL +
-                                        '/db/claimBadges?walletAddress=' +
-                                        wallet.address
-                                )
-                            }
+                            onClick={claimBadges}
                         >
                             Claim all
                         </button>
                         <div className="flex flex-row flex-wrap justify-center">
                             {badges.badges.map((badge, index) => {
                                 const { userBadges } = badges
-                                let image
                                 if (userBadges && userBadges[index] >= 1)
                                     image =
                                         'https://ipfs.io/ipfs/' +

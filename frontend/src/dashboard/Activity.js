@@ -1,23 +1,18 @@
 import { React, useState, useEffect } from "react";
 import { RewardModal } from "../modals/RewardModal";
-import { useSelector } from "react-redux";
 import axios from "axios";
 import { useAccount } from "@web3modal/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 
 export const Activity = () => {
-	const wallet = useSelector((state) => state.wallet);
-	const [activities, setActivities] = useState();
-	const [activity, setActivity] = useState();
+  
+	const [activities, setActivities] = useState("");
+	const [activity, setActivity] = useState("");
 	const [openModal, setOpenModal] = useState(false);
-	const { account } = useAccount();
-
-	// useEffect(() => {
-	// 	axios.post(
-	// 		process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
-	// 			"/db/claimTokens?walletAddress=" +
-	// 			wallet.address
-	// 	);
-	// }, []);
+	const { account } = useAccount("");
 
 	useEffect(() => {
 		const getActivities = async () => {
@@ -26,7 +21,7 @@ export const Activity = () => {
 					await axios.get(
 						process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
 							"/db/read-wallet-last?walletAddress=" +
-							wallet.address
+							localStorage.getItem('address')
 					)
 				).data
 			);
@@ -35,7 +30,8 @@ export const Activity = () => {
 		for (const iterator in activities) {
 			setActivity(activities[iterator]);
 		}
-	}, [account.isConnected]);
+	}, [(account)]);
+
 
 	const chargeModal = (number) => {
 		setOpenModal(true);
@@ -67,26 +63,38 @@ export const Activity = () => {
                 )
               ) : (
               <>
-              { 
-                activities && 
+                {activities && 
                   activities.map((activity) => (
-                    <div className="flex h-10 bg-grey rounded-[15px] space-x-0 justify-between">
-                      <div className="gradientbox2 font-fire text-md py-2 px-2 mx-[3px] my-[3px] text-center sm:scale-85 lg:scale-90 xl:scale-100 rounded-[15px]">
-                        <h2 className="text-[15px]">
-                          +{activity.points_earned}
-                        </h2>
-                      </div>
-                      <p className="font-fire text-md py-2 truncate">
-                      {activity.metadata.eventType}
-                      </p>
-                      <div className="flex px-3 py-2">
-                        <div className="relative w-30 flex sm:scale-85 lg:scale-90 xl:scale-100 font-medium items-center border-solid  border-2 rounded-[10px] px-3 border-white">
-                          <h2 className="text-[11px] truncate">DCLAND</h2>
+                    <Swiper
+                        slidesPerView={2}
+                        spaceBetween={1}
+                        pagination={{
+                        clickable: true,
+                      }}
+                      modules={[Pagination]}
+                      className="mySwiper"
+                    >
+                    <SwiperSlide>
+                      <div className="flex h-8 bg-grey rounded-[15px] space-x-0 justify-between">
+                        <div className="gradientbox2 font-fire text-md py-1 px-2 mx-[3px] my-[3px] text-center sm:scale-85 lg:scale-90 xl:scale-100 rounded-[15px]">
+                          <h2 className="text-[15px]">
+                            +{activity.points_earned}
+                          </h2>
+                        </div>
+                        <p className="font-fire text-md py-2 truncate">
+                        {activity.metadata.eventType}
+                        </p>
+                        <div className="flex px-3 py-2">
+                          <div className="relative w-30 flex sm:scale-85 lg:scale-90 xl:scale-100 font-medium items-center border-solid  border-2 rounded-[10px] px-3 border-white">
+                            <h2 className="text-[11px] truncate">DCLAND</h2>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                      </SwiperSlide>
+                    </Swiper>
                   ))
-              } {(!activities || (activities?.length === 0)) && (
+              }
+              {(!activities || (activities?.length === 0)) && (
                 <>
                 <div className="flex h-10 bg-grey rounded-[15px] space-x-0 justify-between">
                   <p className="font-fire text-md py-2 pl-4 truncate">

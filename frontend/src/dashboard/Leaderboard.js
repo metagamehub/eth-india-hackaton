@@ -5,8 +5,8 @@ import axios from 'axios'
 export const Leaderboard = () => {
 
   const [openModal, setOpenModal] = useState(false);
-  const [leaderboards, setLeaderboards] = useState();
-  const [leaderboard, setLeaderboard] = useState();
+  const [leaderboards, setLeaderboards] = useState("");
+  const [leaderboard, setLeaderboard] = useState("");
   
   useEffect(() => {
     const getLeaderboards = async () => {
@@ -21,7 +21,7 @@ export const Leaderboard = () => {
     }
     getLeaderboards()
 
-  }, [])
+  }, [leaderboards])
 
   const chargeModal = (number) => {
     setOpenModal(true)

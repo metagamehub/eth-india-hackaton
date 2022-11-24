@@ -23,10 +23,12 @@ export const Auth = () => {
         await loadFull(engine)
     }, [])
     const particlesLoaded = useCallback(async (container) => {}, [])
+    
     useEffect(() => {
         account.isConnected &&
             dispatch(connect({ address: account.address })) &&
             navigate('/dashboard', { replace: true })
+            localStorage.setItem('address', account.address)
     }, [account])
 
     return (

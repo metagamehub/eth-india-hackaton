@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { Wearable } from '../components/wearable'
-import { useSelector } from "react-redux";
 import axios from 'axios'
-import { useAccount } from '@web3modal/react'
+import { useAccount } from '@web3modal/react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 
 export const Inventory = () => {
-    const wallet = useSelector((state) => state.wallet);
-    const [wearables, setWearables] = useState()
-    const { account } = useAccount()
+    
+    const [wearables, setWearables] = useState("")
+    const { account } = useAccount("")
+
     useEffect(() => {
         const getWearables = async () => {
 
@@ -16,18 +20,21 @@ export const Inventory = () => {
                     await axios.get(
                         process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
                         '/wearables?address=' +
-                        wallet.address
+                        localStorage.getItem('address')
                     )
                 ).data.wearables
             )
         }
         getWearables()
-    }, [(account.isConnected)])
+        console.log("Wearables", wearables)
+    }, [(account)])
+
+    
     return (
-        <div className="bg-grey text-white max-w-full h-[23rem] rounded-2xl space-y-3 overflow-y-auto">
+        <div className="bg-grey text-white max-w-full max-h-full rounded-2xl space-y-3">
             <div className="pb-11 pt-6">
                 <h2 className="text-2xl pl-4">Inventory</h2>
-                    <div className="flex flex-col justify-center max-w-full items-center">
+                    <div className="flex flex-col gap-8 justify-center pt-4 max-w-full items-center">
                 {
                     !wearables
                         ? (
@@ -42,19 +49,33 @@ export const Inventory = () => {
                                 <p className="w-full text-center text-white truncate">This may take a few seconds.</p>
                             </div>
                         ) : (
-                            <div className="grid grid-cols-2 place-content-center max-w-full items-center">
-                                {wearables &&
-                                    wearables.map((wearable) => (
-                                        <Wearable
-                                            url={wearable.image}
-                                            title={wearable.title}
-                                            image_class={`group-hover:grayscale-0 transition duration-300 ease-in-out object-contain`}
-                                        />
-                                    ))}
-                                {(!wearables || (wearables?.length === 0)) && (
-                                    <div>Your inventory is empty</div>
-                                )}
-                            </div>
+                            <>
+                            <Swiper
+                                slidesPerView={2}
+                                spaceBetween={1}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                modules={[Pagination]}
+                                className="mySwiper"
+                            >
+                                
+                                    <div className="grid grid-cols-2 place-content-center max-w-full items-center">
+                                    {wearables &&
+                                        wearables.map((wearable) => (
+                                            <SwiperSlide>
+                                            <Wearable
+                                                url={wearable.image}
+                                                title={wearable.title}
+                                                image_class={`group-hover:grayscale-0 transition duration-300 ease-in-out object-contain`} />
+                                            </SwiperSlide>
+                                        ))}
+                                    {(!wearables || (wearables?.length === 0)) && (
+                                        <div>Your inventory is empty</div>
+                                    )}
+                                 </div>
+                            </Swiper>
+                            </>
                         )
                 }
                 </div>

@@ -4,9 +4,12 @@ import { useDispatch } from 'react-redux'
 import { disconnect } from '../state/wallet'
 import { useNetwork, useSwitchNetwork, useConnectModal, useDisconnect, Web3Modal } from '@web3modal/react'
 import { chains } from '@web3modal/ethereum'
+import { useAccount } from '@web3modal/react'
 
-export const WalletModal = ({ onDismiss, account }) => {
+export const WalletModal = ({ onDismiss}) => {
 
+  
+    const { account } = useAccount("")  
     const disconnectWallet = useDisconnect()
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -18,22 +21,23 @@ export const WalletModal = ({ onDismiss, account }) => {
       account.isConnected !== undefined &&
           !account.isConnected &&
           navigate('/', { replace: true })   
-  }, [account])
+    }, [account])
   
   return (
     <>
       <div className='modal text-center text-white'>
       <div onClick={onDismiss} className="absolute h-full w-full bg-black bg-opacity-40 backdrop-filter backdrop-blur" />
-        <div className="z-10 w-96 transform scale-85 sm:scale-100 flex flex-col items-stretch shadow-dark p-5 space-y-7 rounded-xl border border-white border-opacity-20 bg-grey-darkest bg-opacity-20 backdrop-filter backdrop-blur-xl">
-            <h2 className='truncate max-h-[3.5rem] mx-4 mt-2'>{account?.address}</h2>
+        <div className="z-10 w-[25rem] transform scale-85 sm:scale-100 flex flex-col items-stretch shadow-dark pb-6 px-10 space-y-7 rounded-xl border border-white border-opacity-20 bg-grey-darkest bg-opacity-20 backdrop-filter backdrop-blur-xl">
+            <h2 className='truncate max-h-[3.9rem] mx-4 mt-6'>Wallet config.</h2>
+            <p className='truncate'>{account?.address}</p>
             <div className='flex flex-row'>
-              <button className='py-2 mx-2 w-full border-solid border-2 rounded-xl border-white hover:border-tahiti hover:text-tahiti'
+              <button className='py-2 mr-2 w-full border-solid border-2 rounded-xl border-white hover:border-tahiti hover:text-tahiti'
                   onClick={() => {
                      open()
                      }}>
                   Switch Wallet
               </button>
-              <button className='py-2 mx-2 w-full border-solid border-2 rounded-xl border-white hover:border-tahiti hover:text-tahiti'
+              <button className='py-2 ml-2 w-full border-solid border-2 rounded-xl border-white hover:border-tahiti hover:text-tahiti'
                   onClick={() => {
                       dispatch(disconnect())
                       disconnectWallet()
