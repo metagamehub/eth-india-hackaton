@@ -21,7 +21,7 @@ export const Leaderboard = () => {
     }
     getLeaderboards()
 
-  }, [leaderboards])
+  }, [])
 
   const chargeModal = (number) => {
     setOpenModal(true)

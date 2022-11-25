@@ -28,11 +28,12 @@ export const Dashboard = () => {
             </div>
             <iframe
                 className="item-b"
-                src="https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17 17 17 / var(--tw-bg-opacity))&ov=true"
+                id='frame'
+                src="https://avatar-generator-metagamehub.vercel.app/?campaign=mlp&bg=rgb(17%2017%2017%20/%20var(--tw-bg-opacity))&ov=true"
                 width="100%"
                 height="100%"
             ></iframe>
-
+            {/* https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17%2017%2017%20/%20var(--tw-bg-opacity))&ov=true */}
             <div className="item-c">
                 <WalletButton address={address}/>
             </div> 

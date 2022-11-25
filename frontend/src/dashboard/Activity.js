@@ -32,7 +32,7 @@ export const Activity = () => {
 		for (const iterator in activities) {
 			setActivity(activities[iterator]);
 		}
-	}, [(account)]);
+	}, []);
 
 
 	const chargeModal = (number) => {
