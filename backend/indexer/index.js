@@ -9,12 +9,12 @@ const options = {
 		maxReceivedFrameSize: 100000000, //3555167
 		maxReceivedMessageSize: 100000000,
 	},
-	reconnect: {
-		auto: true,
-		delay: 5000, // ms
-		maxAttempts: 5,
-		onTimeout: false,
-	},
+	// reconnect: {
+	// 	auto: true,
+	// 	delay: 5000, // ms
+	// 	maxAttempts: 5,
+	// 	onTimeout: false,
+	// },
 };
 
 const ws = new Web3WsProvider(process.env.RPC_NODE_ADDRESS, options);
@@ -41,7 +41,6 @@ async function subscribeToEvents(contractAddress, topics, startingBlock, tag) {
 			//console.log("Suscribed to "+tag, subscriptionId);
 		})
 		.on("data", async (log) => {
-			//console.log(new Date().toISOString() +" update on "+tag, log);
 			//should be an array that we traverse
 			const finalPayload = await obtainPayloadFromLogData(contractAddress, topics, log);
 			// console.log(">> final payload:",finalPayload)
@@ -133,8 +132,6 @@ async function run() {
 		}
 	}
 }
-
-// run();
 
 module.exports = {
 	run,

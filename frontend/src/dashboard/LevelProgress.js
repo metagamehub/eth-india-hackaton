@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useProvider } from "@web3modal/react";
-import { getBalance as getMLPBalance } from "../services/MLPContractService";
+import { getBalance as getMLPBalance, getLevel as getMLPLevel } from "../services/MLPContractService";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
-export const LevelProgress = ({ progress, level }) => {
+export const LevelProgress = ({ progress }) => {
 	const { provider } = useProvider();
 	const wallet = useSelector((state) => state.wallet);
 	const [balance, setBalance] = useState();
+	const [level, setLevel] = useState();
 	const Parentdiv = {
 		height: "12px",
 		width: "100%",
@@ -38,6 +39,7 @@ export const LevelProgress = ({ progress, level }) => {
 				.then(async () => {
 					console.log(">> poinst claimed");
                     setBalance(await getMLPBalance(wallet.address, provider));
+					setLevel(await getMLPLevel(wallet.address, provider))
 				});
 		};
 		const getBalance = async () => {
