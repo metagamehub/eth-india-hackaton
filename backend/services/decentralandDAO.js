@@ -1,4 +1,5 @@
 const axios = require("axios");
+const https = require('https')
 const databaseController = require("../controller/controller");
 
 let proposals = [];
@@ -7,7 +8,8 @@ async function getProposalsInit() {
 	axios({
 		url: "https://hub.snapshot.org/graphql",
 		method: "get",
-		keepAlive: true,
+		httpsAgent: new https.Agent({ keepAlive: true }),
+		timeout: 60000, 
 		data: {
 			query: `
                 query Proposals {
@@ -42,7 +44,8 @@ async function getProposals() {
 	axios({
 		url: "https://hub.snapshot.org/graphql",
 		method: "get",
-		keepAlive: true,
+		httpsAgent: new https.Agent({ keepAlive: true }),
+		timeout: 60000, 
 		data: {
 			query: `
                 query Proposals {
@@ -69,7 +72,7 @@ async function getProposals() {
 			await getVoters();
 		})
 		.catch((error) => {
-			console.log(">> axios error:", error.code);
+			console.log(">> axios error getting proposals:", error.code);
 			console.log(error.message);
 		});
 }
@@ -84,11 +87,13 @@ async function getVoters() {
 				eventType: "Created a proposal",
 			},
 		};
+		// console.log(">> proposal.id:", proposal.id)
 		await databaseController.createSelfFromDAO(body);
 		axios({
 			url: "https://hub.snapshot.org/graphql",
 			method: "get",
-			keepAlive: true,
+			httpsAgent: new https.Agent({ keepAlive: true }),
+			timeout: 60000, 
 			data: {
 				query: `
                     query Votes {
@@ -113,8 +118,9 @@ async function getVoters() {
 				}
 			})
 			.catch((error) => {
-				console.log(">> axios error:", error.code);
+				console.log(">> axios error getting votes:", error.code);
 				console.log(error.message);
+				console.log(error)
 			});
 	}
 }
