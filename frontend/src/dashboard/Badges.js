@@ -71,6 +71,8 @@ export const Badges = () => {
 			</div>
 		));
 	};
+
+    
 	return (
 		<>
 			<Toaster position="bottom-center" reverseOrder={false} />

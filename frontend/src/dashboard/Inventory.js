@@ -6,53 +6,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Grid, Navigation, Pagination } from "swiper";
+import "swiper/css/scrollbar";
+import { Grid, Navigation, Scrollbar } from "swiper";
 
 export const Inventory = () => {
 	const [wearables, setWearables] = useState("");
 	const { account } = useAccount("");
 
-	const frame = document.getElementById("frame");
-	window.addEventListener("message", subscribe);
-	document.addEventListener("message", subscribe);
-
-	function subscribe(event) {
-		const json = event.data;
-		if (json?.source !== "avatar-generator") {
-			return;
-		}
-		// Event ready recieved and inmediatly subscribing
-		if (json.eventName === "ready") {
-			console.log(json);
-			frame.contentWindow.postMessage(
-				{
-					target: "avatar-generator",
-					eventName: "subscribe",
-				},
-				"*"
-			);
-		}
-		if (json.eventName === "exported") {
-			console.log(json);
-		}
-	}
-
-	const avatarWearable = () => {
-		frame.contentWindow.postMessage(
-			{
-				target: "avatar-generator",
-				eventName: "change",
-				payload: {
-					id: "Chest",
-					val: "MetaPartyJacket",
-					detail:
-						"https://peer-wc1.decentraland.org/content/contents/bafkreicmd64pg43dfqdwrkfbucxb43jceubids5bky6ijitfb5h7ca4nee",
-				},
-			},
-			"*"
-		);
-	};
+	
 
 	useEffect(() => {
 		const getWearables = async () => {
@@ -67,7 +28,7 @@ export const Inventory = () => {
 			);
 		};
 		getWearables();
-	}, []);
+	}, [account.isConnected]);
 
 	return (
 		<div className="bg-grey text-white max-w-full max-h-full rounded-2xl space-y-3">
@@ -109,8 +70,10 @@ export const Inventory = () => {
 									fill: "row",
 								}}
 								spaceBetween={1}
-								navigation={true}
-								modules={[Navigation, Grid, Pagination]}
+								scrollbar={{
+                                    hide: false,
+                                }}
+								modules={[Navigation, Grid, Scrollbar]}
 								className="mySwiper"
 							>
 								{wearables &&
@@ -119,16 +82,11 @@ export const Inventory = () => {
 											<Wearable
 												url={wearable.image}
 												title={wearable.title}
-												image_class={`group-hover:grayscale-0 transition duration-300 ease-in-out object-contain`}
+												image_class={`group-hover/item:opacity-40 hover:opacity-40 transition duration-300 ease-in-out object-contain`}
 											/>
 										</SwiperSlide>
 									))}
-								<button
-									className="ml-4 z-10 border-solid border-2 w-24 h-7 text-[17px] rounded-xl border-white hover:border-tahiti hover:text-tahiti"
-									onClick={avatarWearable}
-								>
-									Wear
-								</button>
+								
 								{(!wearables || wearables?.length === 0) && <div>Your inventory is empty</div>}
 							</Swiper>
 						</>

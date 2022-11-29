@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Grid, Navigation, Pagination } from "swiper";
+import "swiper/css/scrollbar";
+import { Grid, Navigation, Scrollbar } from "swiper";
 
 export const Activity = () => {
   
@@ -32,7 +32,7 @@ export const Activity = () => {
 		for (const iterator in activities) {
 			setActivity(activities[iterator]);
 		}
-	}, []);
+	}, [account.isConnected]);
 
 
 	const chargeModal = (number) => {
@@ -72,14 +72,17 @@ export const Activity = () => {
                     fill: "row",
                   }}
                   spaceBetween={12}
-                  navigation={true}
-                  modules={[Navigation, Grid, Pagination]}
-                  className="mySwiper"
+                  scrollbar={{
+                    hide: false,
+                    draggable: true,
+                  }}
+                  modules={[Navigation, Grid, Scrollbar]}
+                  className="mySwiper mb-4"
                 >  
                 {activities &&                
                   activities.map((activity) => (
                     <SwiperSlide>
-                      <div className="flex h-10 w-[80%] bg-grey rounded-[15px] space-x-0 justify-between">
+                      <div className="flex h-10 w-full bg-grey rounded-[15px] space-x-0 justify-between">
                         <div className="gradientbox2 font-fire py-1 px-2 m-1 text-md text-center sm:scale-85 lg:scale-90 xl:scale-100 rounded-[12px]">
                           <h2 className="text-[15px]">
                             +{activity.points_earned}

@@ -26,6 +26,9 @@ p {
     @layer text-md 
 }
 
+
+
+/* Color gradient */
 .regularButton button{
     @apply w-[100%] h-16 rounded-xl;
     background: linear-gradient(123.27deg, #A278F8 23.13%, #0A59AA 72.67%) !important;
@@ -45,6 +48,9 @@ p {
     background: linear-gradient(123.27deg, #A278F8 23.13%, #0A59AA 72.67%)
 }
 
+
+
+/* Modals Options */
 .modal{
     @apply fixed top-0 left-0 flex items-center justify-center h-screen w-screen z-50;
     background: rgba(0, 0, 0, 0.15);
@@ -62,6 +68,8 @@ p {
     @apply absolute py-2 right-20;
 }
 
+
+/* Grid Dashboard Options */
 .container-dashboard{
     display: grid;
     grid-gap: 30px;
@@ -105,6 +113,8 @@ p {
     grid-area: activity;
 }
 
+
+/* Swiper CSS options */
 .swiper {
     width: 100%;
     height: 100%;
@@ -116,8 +126,6 @@ p {
     text-align: center;
     font-size: 18px;
 
-  
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -131,4 +139,15 @@ p {
     -webkit-align-items: center;
     align-items: center;
   }
+
+
+  .swiper-scrollbar-drag{
+    background: #9c9c9c !important;
+    cursor: pointer;
+  }
+
+  .swiper-wrapper{
+    margin-bottom: 20px;
+  }
+
 
