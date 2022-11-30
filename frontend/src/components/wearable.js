@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Wearable = ({ name, url, title ,image_class , onClick, clicked }) => {
+export const Wearable = ({ wearable, url, title, image_class, onClick }) => {
 
     const frame = document.getElementById("frame");
 	window.addEventListener("message", subscribe);
@@ -34,10 +34,9 @@ export const Wearable = ({ name, url, title ,image_class , onClick, clicked }) =
 				eventName: "change",
 				payload: {
 					id: "Chest",
-					val: "MetaPartyJacket",
-					detail:
-						"https://peer-wc1.decentraland.org/content/contents/bafkreicmd64pg43dfqdwrkfbucxb43jceubids5bky6ijitfb5h7ca4nee",
-				},
+					val: wearable.name,
+					detail: wearable.data.representations[0].contents[0].url,				
+                },
 			},
 			"*"
 		);
@@ -51,7 +50,7 @@ export const Wearable = ({ name, url, title ,image_class , onClick, clicked }) =
             sm:space-y-2 lg:w-35 xl:w-40 lg:h-35 xl:h-40 rounded ${onClick ? "cursor-pointer" : "cursor-default"} 
             group/item hover:scale-110 transition duration-200 ease-linear`}
         >
-            <img alt={title} src={url}  className={image_class} />
+            <img alt={title} src={url} className={image_class} />
             <button
 				className="z-10 border-solid absolute !opacity-100 border-y-2 w-[100%] h-9 text-[17px] border-white 
                 group/edit invisible group-hover/item:visible hover:border-[#C7FFF6] hover:text-[#C7FFF6]"
