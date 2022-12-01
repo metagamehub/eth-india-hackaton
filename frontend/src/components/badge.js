@@ -40,16 +40,18 @@ const Badge = ({ src }) => {
     return (
 
         <>
-        <div className="flex flex-col w-14 h-[4.7rem] mx-[0.45rem] my-2 text-center" key={src}>
-            <img className="h-[4.5rem] w-14" src={src} alt="badge" />
-            {src==="/BadgeBlocked.svg" &&
-                <button
-                    className="z-10 mt-2 border-solid border-2 w-full h-7 text-[12px] rounded-xl border-white hover:border-tahiti hover:text-tahiti"
-                    onClick={claimBadges}
-                >
-                    Claim
-                </button>
-            }
+        <div className="flex flex-col w-14 h-[5rem] mx-[0.45rem] my-2 text-center" key={src}>
+            <img className="h-[4.5rem] w-full" src={src} alt="badge" />
+			<div className='mt-2 h-7'>
+				{src==="/BadgeBlocked.svg" &&
+					<button
+						className="z-10 border-solid border-2 w-full h-full text-[12px] rounded-xl border-white hover:border-tahiti hover:text-tahiti"
+						onClick={claimBadges}
+					>
+						Claim
+					</button>
+				}
+			</div>
         </div></>
     )
 }

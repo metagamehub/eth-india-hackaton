@@ -2,6 +2,7 @@ import React from 'react'
 
 export const Wearable = ({ wearable, url, title, image_class, onClick }) => {
 
+
     const frame = document.getElementById("frame");
 	window.addEventListener("message", subscribe);
 	document.addEventListener("message", subscribe);
@@ -28,12 +29,26 @@ export const Wearable = ({ wearable, url, title, image_class, onClick }) => {
 	}
 
 	const avatarWearable = () => {
+        let tempId;
+        switch (wearable.data.category) {
+            case 'hat':
+                tempId = 'HeadAcc';
+                break;
+            case 'upper_body':
+                tempId = 'Chest';
+                break;
+            case 'lower_body':
+                tempId = 'Legs';
+                break;
+        }
+        console.log("Temporal Id", tempId)
+        console.log("Wearable unique", wearable)
 		frame.contentWindow.postMessage(
 			{
 				target: "avatar-generator",
 				eventName: "change",
 				payload: {
-					id: "Chest",
+					id: tempId,
 					val: wearable.name,
 					detail: wearable.data.representations[0].contents[0].url,				
                 },

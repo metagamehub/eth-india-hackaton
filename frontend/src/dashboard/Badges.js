@@ -38,7 +38,7 @@ export const Badges = () => {
 	}, [provider]);
 
 	useEffect(() => {
-		console.log(badges);
+		console.log("Badges", badges);
 	}, [badges]);
 
 
