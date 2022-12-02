@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useProvider } from "@web3modal/react";
+import { useProvider,useAccount } from 'wagmi'
 import { getBalance as getMLPBalance, getLevel as getMLPLevel } from "../services/MLPContractService";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
 export const LevelProgress = ({ progress }) => {
-	const { provider } = useProvider();
+	const provider  = useProvider();
 	const wallet = useSelector((state) => state.wallet);
 	const [balance, setBalance] = useState();
 	const [level, setLevel] = useState();
+	const account = useAccount()
 	const Parentdiv = {
 		height: "12px",
 		width: "100%",
@@ -34,17 +35,17 @@ export const LevelProgress = ({ progress }) => {
 				.post(
 					process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
 						"/db/claimTokens?walletAddress=" +
-						wallet.address
+						account.address
 				)
 				.then(async () => {
 					console.log(">> poinst claimed");
-                    setBalance(await getMLPBalance(wallet.address, provider));
-					setLevel(await getMLPLevel(wallet.address, provider))
+                    setBalance(await getMLPBalance(account.address, provider));
+					setLevel(await getMLPLevel(account.address, provider))
 				});
 		};
 		const getBalance = async () => {
 			console.log(">> bringing points");
-			setBalance(await getMLPBalance(wallet.address, provider));
+			setBalance(await getMLPBalance(account.address, provider));
 		};
 		provider && claimTokens() && getBalance();
 	}, [provider]);

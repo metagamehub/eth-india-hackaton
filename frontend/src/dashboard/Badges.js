@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Badge from "../components/badge";
 import axios from "axios";
 import { getBalance as BadgesContractservice } from "../services/BadgesContractService";
-import { useProvider } from "@web3modal/react";
+import { useProvider } from 'wagmi'
 import { useSelector } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -17,7 +17,7 @@ const badgesOrder = {
 export const Badges = () => {
 	const wallet = useSelector((state) => state.wallet);
 	const [badges, setBadges] = useState("");
-	const { provider } = useProvider();
+	const provider  = useProvider();
 	let image;
 
 	useEffect(() => {

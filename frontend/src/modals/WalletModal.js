@@ -2,24 +2,22 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { disconnect } from '../state/wallet'
-import { useNetwork, useSwitchNetwork, useConnectModal, useDisconnect, Web3Modal } from '@web3modal/react'
-import { chains } from '@web3modal/ethereum'
-import { useAccount } from '@web3modal/react'
+import { useNetwork, useSwitchNetwork, useConnectModal, useDisconnect, useAccount } from 'wagmi'
+import { useWeb3Modal} from '@web3modal/react'
 
 export const WalletModal = ({ onDismiss}) => {
 
   
-    const { account } = useAccount("")  
+    const { account } = useAccount()  
     const disconnectWallet = useDisconnect()
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const { network } = useNetwork()
     const { switchNetwork } = useSwitchNetwork()
-    const { open } = useConnectModal()
+    const { open } = useWeb3Modal()
 
     useEffect(() => { 
-      account.isConnected !== undefined &&
-          !account.isConnected &&
+          !account &&
           navigate('/', { replace: true })   
     }, [account])
   
@@ -58,18 +56,7 @@ export const WalletModal = ({ onDismiss}) => {
           </div>
         </div>
     </div>
-    <Web3Modal
-                config={{
-                    projectId: process.env.REACT_APP_WALLETCONNECT_PROJECT_ID,
-                    theme: 'dark',
-                    accentColor: 'default',
-                    ethereum: {
-                        appName: 'web3Modal',
-                        autoConnect: true,
-                        chains: [chains.polygon],
-                    },
-                }}
-            />
+
     </>
   )
 }

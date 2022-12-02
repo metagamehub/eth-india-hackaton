@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { RewardModal } from "../modals/RewardModal";
 import axios from "axios";
-import { useAccount } from "@web3modal/react";
+import { useAccount } from "wagmi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
@@ -32,7 +32,7 @@ export const Activity = () => {
 		for (const iterator in activities) {
 			setActivity(activities[iterator]);
 		}
-	}, [account.isConnected]);
+	}, [account]);
 
 
 	const chargeModal = (number) => {

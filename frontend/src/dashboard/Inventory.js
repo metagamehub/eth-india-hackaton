@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Wearable } from "../components/wearable";
 import axios from "axios";
-import { useAccount } from "@web3modal/react";
+import { useAccount } from "wagmi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/grid";
@@ -11,7 +11,7 @@ import { Grid, Navigation, Scrollbar } from "swiper";
 
 export const Inventory = () => {
 	const [wearables, setWearables] = useState("");
-	const { account } = useAccount("");
+	const account  = useAccount();
 
 	
 
