@@ -1,5 +1,5 @@
 import React, { useEffect, useState,useRef } from "react";
-import { useProvider,useAccount } from 'wagmi'
+import { useProvider, useAccount } from 'wagmi'
 import { getBalance as getMLPBalance, getLevel as getMLPLevel } from "../services/MLPContractService";
 import { useSelector } from "react-redux";
 import axios from "axios";
@@ -38,7 +38,7 @@ export const LevelProgress = ({ progress }) => {
 				.post(
 					process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
 						"/db/claimTokens?walletAddress=" +
-						localStorage.getItem("address")
+						account.address
 				)
 				.then(async (res) => {
 					let poinsMinted;
@@ -94,7 +94,6 @@ export const LevelProgress = ({ progress }) => {
 
 	return (
 		<>
-		<Toaster position="bottom-center" reverseOrder={false} />
 		<div className="flex flex-col">
 			{balance && (
 				<div className="flex items-end">

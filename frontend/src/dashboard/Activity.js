@@ -14,7 +14,7 @@ export const Activity = () => {
 	const [activities, setActivities] = useState("");
 	const [activity, setActivity] = useState("");
 	const [openModal, setOpenModal] = useState(false);
-	const { account } = useAccount("");
+	const account = useAccount();
 
 	useEffect(() => {
 		const getActivities = async () => {
@@ -23,7 +23,7 @@ export const Activity = () => {
 					await axios.get(
 						process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
 							"/db/read-wallet-last?walletAddress=" +
-							localStorage.getItem('address')
+							account.address
 					)
 				).data
 			);
@@ -32,7 +32,7 @@ export const Activity = () => {
 		for (const iterator in activities) {
 			setActivity(activities[iterator]);
 		}
-	}, [account]);
+	}, [account.isConnected]);
 
 
 	const chargeModal = (number) => {

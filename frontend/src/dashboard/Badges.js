@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import Badge from "../components/badge";
 import axios from "axios";
 import { getBalance as BadgesContractservice } from "../services/BadgesContractService";
-import { useProvider } from 'wagmi'
-import { useSelector } from "react-redux";
+import { useProvider, useAccount } from 'wagmi'
 import toast, { Toaster } from "react-hot-toast";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -24,13 +23,14 @@ export const Badges = () => {
 
 	const [badges, setBadges] = useState("");
 	const provider  = useProvider();
+	const account = useAccount()
 
 	useEffect(() => {
 		const getBadges = async () => {
 			const badges = (
 					await axios.get(process.env.REACT_APP_WALLETCONNECT_BACKEND_URL + "/ipfs/getPins")
 				).data,
-				userBadges = await BadgesContractservice(localStorage.getItem("address"), provider);
+				userBadges = await BadgesContractservice(account.address, provider);
 			setBadges({
 				badges,
 				userBadges,

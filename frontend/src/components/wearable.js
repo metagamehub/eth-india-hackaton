@@ -41,8 +41,6 @@ export const Wearable = ({ wearable, url, title, image_class, onClick }) => {
                 tempId = 'Legs';
                 break;
         }
-        console.log("Temporal Id", tempId)
-        console.log("Wearable unique", wearable)
 		frame.contentWindow.postMessage(
 			{
 				target: "avatar-generator",

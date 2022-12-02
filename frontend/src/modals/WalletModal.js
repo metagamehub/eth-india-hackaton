@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { disconnect } from '../state/wallet'
-import { useNetwork, useSwitchNetwork, useConnectModal, useDisconnect, useAccount } from 'wagmi'
+import { useNetwork, useSwitchNetwork, useDisconnect, useAccount } from 'wagmi'
 import { useWeb3Modal} from '@web3modal/react'
 
 export const WalletModal = ({ onDismiss}) => {
@@ -10,7 +10,7 @@ export const WalletModal = ({ onDismiss}) => {
     const disconnectWallet  = useDisconnect()
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const { network } = useNetwork()
+    const network = useNetwork()
     const { switchNetwork } = useSwitchNetwork()
     const { open } = useWeb3Modal()
 

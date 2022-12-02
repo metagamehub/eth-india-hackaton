@@ -12,14 +12,6 @@ export const Dashboard = () => {
     const account = useAccount()
     const [address, setAddress] = useState('')
 
-    
-    useEffect(() => {
-        account.isConnected &&
-            localStorage.setItem('address', account.address)
-            setAddress(
-                localStorage.getItem('address')
-            )
-    }, [account.isConnected])
 
     return (
         <>
@@ -38,7 +30,7 @@ export const Dashboard = () => {
                 ></iframe>
                 {/* https://avatar-generator-metagamehub.vercel.app/?campaign=decentraland&bg=rgb(17%2017%2017%20/%20var(--tw-bg-opacity))&ov=true */}
                 <div className="item-c">
-                    <WalletButton address={address} />
+                    <WalletButton/>
                 </div>
                 <div className="item-d">
                     <Badges />

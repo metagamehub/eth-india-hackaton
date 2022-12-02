@@ -1,14 +1,18 @@
 import React from 'react'
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { useAccount } from 'wagmi'
 
 const Badge = ({ src }) => {
+
+	const account = useAccount()
+
 
     const claimBadges = () => {
 		axios.post(
 			process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
 				"/db/claimBadges?walletAddress=" +
-				localStorage.getItem("address")
+				account.address
 		);
 		toast.custom((t) => (
 			<div

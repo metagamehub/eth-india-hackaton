@@ -24,7 +24,6 @@ export const Auth = () => {
         if (account && account.isConnected) {
             dispatch(connect({ address: account.address }))
                 navigate('/dashboard', { replace: true })
-            localStorage.setItem('address', account.address)
         }
     }, [account.isConnected])
 

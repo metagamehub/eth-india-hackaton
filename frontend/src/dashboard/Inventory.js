@@ -24,7 +24,7 @@ export const Inventory = () => {
 					await axios.get(
 						process.env.REACT_APP_WALLETCONNECT_BACKEND_URL +
 							"/wearables?address=" +
-							localStorage.getItem("address")
+							account.address
 					)
 				).data.wearables
 			);
