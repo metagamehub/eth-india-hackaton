@@ -18,6 +18,7 @@ export const Inventory = () => {
 	
 	useEffect(() => {
 		const getWearables = async () => {
+			console.log(">> get wearables")
 			setWearables(
 				(
 					await axios.get(
