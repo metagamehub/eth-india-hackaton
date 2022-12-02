@@ -212,7 +212,7 @@ module.exports = {
 		}
 	},
 
-	createSelfFromDAO: async function (request) {
+	createSelfFromDAOandEvents: async function (request) {
 		try {
 			const { metadata, points_earned, event_id } = request;
 			if (!event_id) return "no complete parameters";
@@ -287,4 +287,11 @@ module.exports = {
 			return res.status(400).json({ msg: error.message });
 		}
 	},
+
+	getEventTypes: async function (req, res) {
+		try {
+		} catch (error) {
+			
+		}
+	}
 };

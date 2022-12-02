@@ -3,6 +3,7 @@ const cors = require("cors");
 const routes = require("./routes/routes");
 const { sequelize } = require("./models");
 const decentralandDAO = require("./services/decentralandDAO");
+const decentralandEvents = require("./services/decentralandEvents");
 const index = require("./indexer/index");
 const schedule = require("node-schedule-tz");
 const PORT = process.env.PORT || "3001";
@@ -83,5 +84,6 @@ app.listen(PORT, async () => {
 		console.log("listening on http://localhost:" + PORT);
 		await loadProposalsandVotes();
 		index.run();
+		await decentralandEvents.getEvents()
 	});
 });

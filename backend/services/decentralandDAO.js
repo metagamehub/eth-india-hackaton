@@ -114,7 +114,7 @@ async function getVoters() {
 							eventType: "Voted for a proposal",
 						},
 					};
-					await databaseController.createSelfFromDAO(body);
+					await databaseController.createSelfFromDAOandEvents(body);
 				}
 			})
 			.catch((error) => {
@@ -130,4 +130,4 @@ module.exports = {
 	getProposalsInit,
 };
 
-getProposals();
+// getProposals();
