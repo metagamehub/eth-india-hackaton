@@ -6,10 +6,8 @@ import { useNetwork, useSwitchNetwork, useConnectModal, useDisconnect, useAccoun
 import { useWeb3Modal} from '@web3modal/react'
 
 export const WalletModal = ({ onDismiss}) => {
-
-  
-    const { account } = useAccount()  
-    const disconnectWallet = useDisconnect()
+    const account  = useAccount()  
+    const disconnectWallet  = useDisconnect()
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const { network } = useNetwork()
@@ -17,7 +15,7 @@ export const WalletModal = ({ onDismiss}) => {
     const { open } = useWeb3Modal()
 
     useEffect(() => { 
-          !account &&
+          !account.isConnecting && !account.isConnected &&
           navigate('/', { replace: true })   
     }, [account])
   
@@ -37,8 +35,8 @@ export const WalletModal = ({ onDismiss}) => {
               </button>
               <button className='py-2 ml-2 w-full border-solid border-2 rounded-xl border-white hover:border-tahiti hover:text-tahiti'
                   onClick={() => {
-                      dispatch(disconnect())
-                      disconnectWallet()
+                    dispatch(disconnect())
+                    disconnectWallet.disconnect()
                   }}>
                   Disconnect Wallet
               </button>
@@ -46,7 +44,7 @@ export const WalletModal = ({ onDismiss}) => {
             {network?.chain?.id !==137 && (
                 <button className='py-2 border-solid border-2 rounded-xl border-white hover:border-tahiti hover:text-tahiti'
                     onClick={async () => 
-                        switchNetwork({ chainId: 137 }
+                        switchNetwork(137
                     )}>
                     Switch to Polygon
                 </button>

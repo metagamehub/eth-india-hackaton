@@ -10,11 +10,12 @@ import "swiper/css/scrollbar";
 import { Grid, Navigation, Scrollbar } from "swiper";
 
 export const Inventory = () => {
+
+
 	const [wearables, setWearables] = useState("");
 	const account  = useAccount();
 
 	
-
 	useEffect(() => {
 		const getWearables = async () => {
 			setWearables(
@@ -28,6 +29,7 @@ export const Inventory = () => {
 			);
 		};
 		getWearables();
+        console.log("Wearables", wearables)
 	}, [account.isConnected]);
 
 	return (
@@ -72,14 +74,16 @@ export const Inventory = () => {
 								spaceBetween={1}
 								scrollbar={{
                                     hide: false,
+                                    draggable: true,
                                 }}
 								modules={[Navigation, Grid, Scrollbar]}
-								className="mySwiper"
+								className="mySwiper mb-4"
 							>
 								{wearables &&
 									wearables.map((wearable) => (
 										<SwiperSlide>
 											<Wearable
+                                                wearable={wearable}
 												url={wearable.image}
 												title={wearable.title}
 												image_class={`group-hover/item:opacity-40 hover:opacity-40 transition duration-300 ease-in-out object-contain`}

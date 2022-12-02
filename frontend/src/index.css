@@ -77,11 +77,11 @@ p {
         [row1-start] "title avatar button" 15% [row1-end]
         [row2-start] "title avatar inventory" 2% [row2-end]
         [row3-start] "badges avatar inventory" auto [row3-end]
-        [row4-start] "leaderboard avatar activity" 10% [row4-end]
-        [row5-start] "leaderboard level activity" 12% [row5-end]
+        [row4-start] "leaderboard avatar activity" 8% [row4-end]
+        [row5-start] "leaderboard level activity" 15% [row5-end]
         / 31% auto 31%;
         
-    @apply min-h-screen text-base bg-background text-white py-9 pr-9 space-x-9;
+    @apply min-h-screen text-base bg-background text-white pt-9 pr-9 pb-20 space-x-9;
 }
 
 .item-a {
