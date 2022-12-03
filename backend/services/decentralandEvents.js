@@ -3,10 +3,9 @@ const https = require("https");
 const databaseController = require("../controller/controller");
 
 async function getEvents() {
-	let tries = 0;
-	do {
-		try {
-			axios({
+	try {
+		while (true){
+			await axios({
 				method: "get",
 				httpsAgent: new https.Agent({ keepAlive: true }),
 				timeout: 60000,
@@ -22,13 +21,11 @@ async function getEvents() {
 					if (new Date(element.finish_at) > new Date() && new Date(element.start_at) < new Date())
 						await getAttendes(element.name,element.id,element.start_at,element.finish_at,element.coordinates);
 				}
-				tries = 3;
 			});
-		} catch (error) {
-			setTimeout(tries++, 3000)
 		}
-	} while (tries < 3);
-	
+	} catch (error) {
+		setTimeout(console.log("error"), 3000)
+	}	
 }
 
 async function getAttendes(event_name,event_id,event_start_at,event_finish_at,event_coordinates) {
@@ -38,12 +35,12 @@ async function getAttendes(event_name,event_id,event_start_at,event_finish_at,ev
 	const finishDate = new Date(event_finish_at);
 	const finishTimestampSeconds = Math.floor(finishDate.getTime() / 1000);
 
-	console.log(">>> event name :", event_name);
-	console.log(">>> event id:", event_id);
-	console.log(">>> start date:", startTimestampSeconds);
-	console.log(">>> finish date:", finishTimestampSeconds);
-	console.log(">>> X:", event_coordinates[0]);
-	console.log(">>> Y:", event_coordinates[1]);
+	// console.log(">>> event name :", event_name);
+	// console.log(">>> event id:", event_id);
+	// console.log(">>> start date:", startTimestampSeconds);
+	// console.log(">>> finish date:", finishTimestampSeconds);
+	// console.log(">>> X:", event_coordinates[0]);
+	// console.log(">>> Y:", event_coordinates[1]);
 
 	let index = 9;
 	let attendees = [];
@@ -62,7 +59,6 @@ async function getAttendes(event_name,event_id,event_start_at,event_finish_at,ev
 				setTimeout(resolve, 60000);
 			});
 		}
-
 		await axios({
 			method: "get",
 			httpsAgent: new https.Agent({ keepAlive: true }),
@@ -70,8 +66,8 @@ async function getAttendes(event_name,event_id,event_start_at,event_finish_at,ev
 			url: `https://dao-data.atlascorp.io/user-history/${from}/${to}/${event_coordinates[0]}/${event_coordinates[1]}`,
 		})
 			.then(function (response) {
-				console.log(">>> from:", from);
-				console.log(">>> to:", to);
+				// console.log(">>> from:", from);
+				// console.log(">>> to:", to);
 				for (const element of response.data) {
 					for (const attendee of element["unique-users"]) {
 						attendees.push(attendee);
